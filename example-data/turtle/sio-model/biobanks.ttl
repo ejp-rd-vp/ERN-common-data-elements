@@ -2,16 +2,25 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> . 
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :role_1.
+    
+ :role_1 a obo:OBI_0000093 ;
+    sio:SIO_000356 :sampling_process_ .
 
 :specimen_ a sio:SIO_010412 ;
-  sio:SIO_000228 :role_ .
+  sio:SIO_000228 :role_2 .
 
-:role_ a obo:OBI_0000740 ;
-  sio:SIO_000356 :storing_process_ .
+:role_2 a obo:OBI_0000112 ;
+  sio:SIO_000356 :sampling_process_ .
 
-:storing_process_ a obo:ICO_0000060 ;
-  sio:SIO_000229 :biobank_ .
+:biobank_ a obo:OMIABIS_0000010 ;
+  dc:title "UK BioBank"^^xsd:string ;
+  sio:SIO_000228 :role_3 .
+  
+:role_3 a obo:OBI_0000947 ;
+  sio:SIO_000356 :sampling_process_ .
 
-:biobank_ a obo:OMIABIS_0001078 ;
-  sio:SIO_000300 "UK BioBank"^^xsd:string .
+:sampling_process_ a obo:OMIABIS_0000061 .
