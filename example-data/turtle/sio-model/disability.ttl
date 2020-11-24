@@ -2,26 +2,19 @@
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
 
 
 :person_ a sio:SIO_000498 ;
-   sio:SIO_000228 :role_ ;
-   sio:SIO_000217 :quality_ .
+   sio:SIO_000228 :role_ .
 
 :role_ a obo:OBI_0000093 ;
    sio:SIO_000356 :test_process_ .
 
-:quality_ a obo:NCIT_C21007 ;  
-   sio:SIO_000642 :answer_ ;
-   sio:SIO_000216 :score_ .
-
 :questionnaire_document_ a obo:NCIT_C130322 ; 
    sio:SIO_000028 :questionnaire_question_ .
 
-:questionnaire_question_ a obo:NCIT_C130916 ; 
-   # sio:SIO_000332 :quality_ ; # optional
+:questionnaire_question_ a obo:NCIT_C130916 ;
    sio:SIO_000300 "How many days difficulty present?"^^xsd:string .
 
 :test_process_ a obo:OMIT_0028217 ; 
@@ -29,18 +22,12 @@
    sio:SIO_000229 :answer_ .
 
 :answer_ a sio:SIO_000340 ; 
-   # sio:SIO_000008 :score_ ; # optional
    sio:SIO_000221 obo:UO_0000033 ; 
    sio:SIO_000300 "1"^^xsd:integer .
 
 :evaluation_process_ a obo:OMIT_0005448 ; 
    sio:SIO_000230 :answer_ ;
-   sio:SIO_000229 :score_ ;
-   prov:wasInformedBy :test_process_ .
+   sio:SIO_000229 :score_ .
 
-:score_ a snomedct:715823002 ; 
-   sio:SIO_000008 :percentage_ ;
+:score_ a snomedct:715823002 ;
    sio:SIO_000300 "22.3"^^xsd:decimal .
-
-:percentage_ a obo:UO_0000187 ;  
-   sio:SIO_000300 "50"^^xsd:decimal .
