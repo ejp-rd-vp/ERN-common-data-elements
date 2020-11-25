@@ -2,8 +2,8 @@ PREFIX : <http://purl.org/ejp-rd/cde/v020/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX loinc: <http://purl.bioontology.org/ontology/LNC/>
+PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
 
 
 :personShape IRI {
@@ -19,18 +19,31 @@ PREFIX loinc: <http://purl.bioontology.org/ontology/LNC/>
 }
 
 :processShape IRI {
-  a [sio:SIO_000006 sio:SIO_001001];
-  prov:wasInformedBy @:processShape ?;
-  prov:startedAtTime xsd:dateTime;
+  (a [sio:SIO_000006];
+  sio:SIO_000230 @:outputReferToDiseaseShape;
   sio:SIO_000229 @:outputShape
+  |
+  a [sio:SIO_001001];
+  sio:SIO_000229 @:outputReferToDiseaseShape
+  );
+  sio:SIO_000680 xsd:dateTime
 }
 
 :outputShape IRI {
   a [sio:SIO_000340];
-  (a [loinc:LP91394-4]|
-  a IRI /^http:\/\/www.orpha.net\/ORDO\/Orphanet_/
-  )
+  a [loinc:LP91394-4 snomedct:263675000 snomedct:373068000]
 }
+
+:outputReferToDiseaseShape IRI {
+  a [sio:SIO_000340];
+  a [sio:SIO_000015];
+  sio:SIO_000628 @:diseaseShape
+}
+
+:diseaseShape IRI {
+  a IRI /^http:\/\/www.orpha.net\/ORDO\/Orphanet_/
+}
+
 
 :ageAtDiagnosisQualityShape IRI {
   a [obo:NCIT_C156420];
