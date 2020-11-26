@@ -11,7 +11,7 @@
 :role_ a obo:OBI_0000093 ;
    sio:SIO_000356 :test_process_ .
 
-:questionnaire_document_ a obo:NCIT_C130322 ; 
+:questionnaire_document_ a obo:NCIT_C130322, obo:NCIT_C91102  ; 
    sio:SIO_000028 :questionnaire_question_ .
 
 :questionnaire_question_ a obo:NCIT_C130916 ;
