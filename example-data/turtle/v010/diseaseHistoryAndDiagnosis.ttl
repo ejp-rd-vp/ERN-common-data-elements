@@ -29,5 +29,3 @@
 
 :diagnosisAgeValue1
   a snomedct:373068000 .
-
-

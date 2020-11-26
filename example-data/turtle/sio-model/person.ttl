@@ -1,0 +1,11 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+
+:person_ a sio:SIO_000498 ; # :person_ a sio:person ;
+  sio:SIO_000228 :role_ ; # sio:has-role :role_ ;
+  obo:RO_0002162 :taxon_ . # ro:in-taxon :taxon_ .
+
+:role_ a obo:OBI_0000093 . # :role_ a obo:patient_role .
+
+:taxon_ a obo:NCBITaxon_9606 . # :taxon_ a obo:homo_sapiens .

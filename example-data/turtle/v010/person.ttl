@@ -5,5 +5,3 @@
   obo:RO_0000087 :personRole1 .
 
 :personRole1 a obo:OBI_0000093 .
-
-

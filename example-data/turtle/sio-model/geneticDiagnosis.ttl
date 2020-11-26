@@ -1,0 +1,16 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:process_ a obo:NCIT_C15709 ;
+    sio:SIO_000229 :variant_ .
+
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :role_ .
+
+:role_ a obo:OBI_0000093 ;
+    sio:SIO_000356 :process_ .
+
+:variant_ a obo:VariO_0138;
+    rdfs:label "NG_007148.2:g.146889G>A" . 

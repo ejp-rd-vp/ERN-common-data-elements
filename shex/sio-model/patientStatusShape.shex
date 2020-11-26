@@ -1,0 +1,30 @@
+PREFIX : <http://purl.org/ejp-rd/cde/v020/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
+PREFIX hl7: <http://purl.bioontology.org/ontology/HL7/>
+
+:personShape IRI {
+  a [sio:SIO_000498];
+  sio:SIO_000228 @:personRoleShape;
+  sio:SIO_000217 @:statusQualityShape
+}
+
+:personRoleShape IRI {
+  a [obo:OBI_0000093];
+  sio:SIO_000356 @:statusProcessShape
+}
+
+:statusProcessShape IRI {
+  a [sio:SIO_000006];
+  sio:SIO_000229 @:outputShape
+}
+
+:outputShape IRI {
+  a [obo:PATO_0001422 obo:PATO_0001421  snomedct:399307001 hl7:C4291647]
+}
+
+:statusQualityShape IRI {
+  a [obo:NCIT_C25688];
+  sio:SIO_000642 @:outputShape
+}

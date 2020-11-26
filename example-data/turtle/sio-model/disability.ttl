@@ -1,0 +1,33 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+
+
+:person_ a sio:SIO_000498 ;
+   sio:SIO_000228 :role_ .
+
+:role_ a obo:OBI_0000093 ;
+   sio:SIO_000356 :test_process_ .
+
+:questionnaire_document_ a obo:NCIT_C130322, obo:NCIT_C91102  ; 
+   sio:SIO_000028 :questionnaire_question_ .
+
+:questionnaire_question_ a obo:NCIT_C130916 ;
+   sio:SIO_000300 "How many days difficulty present?"^^xsd:string .
+
+:test_process_ a obo:OMIT_0028217 ; 
+   sio:SIO_000230 :questionnaire_question_ ;
+   sio:SIO_000229 :answer_ .
+
+:answer_ a sio:SIO_000340 ; 
+   sio:SIO_000221 obo:UO_0000033 ; 
+   sio:SIO_000300 "1"^^xsd:integer .
+
+:evaluation_process_ a obo:OMIT_0005448 ; 
+   sio:SIO_000230 :answer_ ;
+   sio:SIO_000229 :score_ .
+
+:score_ a snomedct:715823002 ;
+   sio:SIO_000300 "22.3"^^xsd:decimal .

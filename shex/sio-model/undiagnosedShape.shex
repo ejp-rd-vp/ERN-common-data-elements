@@ -1,0 +1,40 @@
+PREFIX : <http://purl.org/ejp-rd/cde/v020/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+:personShape IRI { 
+  a [sio:SIO_000498] ;
+  sio:SIO_000228 @:geneticTestingRoleShape ;
+  sio:SIO_000228 @:healthcareActivityRoleShape
+}
+
+:geneticTestingRoleShape IRI {
+  a [obo:OBI_0000093] ;
+  sio:SIO_000356 @:geneticTestingProcessShape
+}
+
+:geneticTestingProcessShape IRI {
+  a [obo:NCIT_C15709] ;
+  sio:SIO_000229  @:variantShape
+}
+
+:variantShape IRI {
+  a [obo:VariO_0138] ;
+  rdfs:label xsd:string
+}
+
+:healthcareActivityRoleShape IRI {
+  a [obo:OBI_0000093] ;
+  sio:SIO_000356 @:healthcareActivityProcessShape
+}
+
+:healthcareActivityProcessShape IRI {
+  a [obo:NCIT_C16205] ;
+  sio:SIO_000229  @:phenotypeShape
+}
+
+:phenotypeShape IRI {
+  a IRI /^http:\/\/purl.obolibrary.org\/obo\/HP_/ 
+}

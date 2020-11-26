@@ -1,0 +1,41 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# An example rdf of person's status
+
+:person_ a sio:SIO_000498 ;
+  sio:SIO_000228 :role_1 ;
+  sio:SIO_000217 :quality_1 . 
+
+:role_1 a obo:OBI_0000093 ;
+  sio:SIO_000356 :process_1 .
+
+:process_1 a sio:SIO_000006 ;
+  sio:SIO_000229 :output_1 .
+
+:output_1 a obo:PATO_0001421 .
+
+:quality_1 a obo:NCIT_C25688 ;
+  sio:SIO_000642 :output_1 .
+
+
+# An example rdf of person's dead date
+
+:person_ a sio:SIO_000498 ;
+  sio:SIO_000228 :role_2 ;
+  sio:SIO_000217 :quality_2 . 
+
+:role_2 a obo:OBI_0000093;
+  sio:SIO_000356 :process_2 .
+
+:process_2 a sio:SIO_000006 ;
+  sio:SIO_000229 :output_2 .
+
+:output_2 a sio:SIO_000340 ;
+  sio:SIO_000300  "1990-01-01T01:12:50"^^xsd:dateTime .
+
+:quality_2 a obo:NCIT_C70810 ;
+  sio:SIO_000642 :output_2 .

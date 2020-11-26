@@ -1,0 +1,46 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ordo: <http://www.orpha.net/ORDO/> .
+@prefix loinc: <http://purl.bioontology.org/ontology/LNC/> .
+
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :role_ ;
+    sio:SIO_000217 :quality_1, :quality_2 .
+
+:role_ a obo:OBI_0000093;
+    sio:SIO_000356 :process_1;
+    sio:SIO_000356 :process_2;
+    sio:SIO_000356 :process_3 .
+
+:process_1 a sio:SIO_001001 ;
+  sio:SIO_000229 :output_1;
+  sio:SIO_000680  "2017-10-18T13:00:00"^^xsd:dateTime .
+  
+:process_2 a sio:SIO_000006 ;
+  sio:SIO_000229 :output_2;
+  sio:SIO_000230 :output_1;
+  sio:SIO_000680  "2015-10-18T13:00:00"^^xsd:dateTime .
+  
+  
+:process_3 a sio:SIO_000006 ;
+  sio:SIO_000229 :output_3;
+  sio:SIO_000230 :output_1;
+  sio:SIO_000680  "2017-10-19T13:00:00"^^xsd:dateTime .    
+
+:output_1 a sio:SIO_000340, sio:SIO_000015; 
+  sio:SIO_000628 :disease_ .
+  
+:disease_ a ordo:Orphanet_377793.
+
+:output_2 a sio:SIO_000340,  loinc:LP91394-4.  
+
+:output_3 a sio:SIO_000340,  loinc:LP91394-4. 
+
+
+:quality_1 a obo:NCIT_C124353 ;
+    sio:SIO_000216 :output_2 .
+
+:quality_2 a obo:NCIT_C156420  ;
+    sio:SIO_000216 :output_3 .

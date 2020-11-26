@@ -1,0 +1,25 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :role_1, :role_2 .
+
+:role_1 a obo:OBI_0000093 ;
+    sio:SIO_000356 :process_1 .
+
+:process_1 a obo:ICO_0000149 ;
+    sio:SIO_000229 :output_1 ;
+    sio:SIO_000680 "2020-10-18T13:00:00"^^xsd:dateTime .    
+    
+:role_2 a obo:OBI_0000093 ;
+    sio:SIO_000356 :process_2 .
+
+:process_2 a obo:ICO_0000181 ;
+    sio:SIO_000229 :output_2 ;
+    sio:SIO_000680 "2020-10-18T13:03:00"^^xsd:dateTime .
+    
+:output_1 a sio:SIO_000340, obo:OPMI_0000023 .
+
+:output_2 a sio:SIO_000340, obo:OPMI_0000024 .
