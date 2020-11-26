@@ -15,7 +15,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 }
 
 :questionnaireShape IRI {
-  a [ obo:NCIT_C130322 ] ;
+  a [ obo:NCIT_C130322  obo:NCIT_C91102 ] ;
   sio:SIO_000028 @:questionnaireQuestionShape
 }
 
