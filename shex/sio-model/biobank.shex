@@ -9,22 +9,32 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
   sio:SIO_000228 @:roleShape
 }
 
+:roleShape IRI {
+  a [obo:OBI_0000093];
+  sio:SIO_000356 @:samplingCollectionShape
+}
+
+:samplingCollectionShape IRI {
+  a [obo:OBI_0000659];
+  sio:SIO_000229 @:specimenShape
+}
+
 :specimenShape IRI {
-  a [sio:SIO_010412] ;
-  sio:SIO_000228 @:roleShape
+  a [sio:SIO_010412] 
 }
 
 :biobankShape IRI {
   a [obo:OMIABIS_0000010] ;
   dc:title xsd:string;
-  sio:SIO_000228 @:roleShape
+  sio:SIO_000228 @:biobankRoleShape
 }
 
-:roleShape IRI {
-  a [obo:OBI_0000093 obo:OBI_0000112 obo:OBI_0000947];
-  sio:SIO_000356 @:samplingprocessShape
+:biobankRoleShape IRI {
+  a [obo:OBI_0000947];
+  sio:SIO_000356 @:samplingStorageShape
 }
 
-:samplingprocessShape IRI {
-  a [obo:OMIABIS_0000061]
+:samplingStorageShape IRI {
+  a [obo:ICO_0000060];
+  sio:SIO_000230 @:specimenShape
 }

@@ -8,19 +8,19 @@
     sio:SIO_000228 :role_1.
     
  :role_1 a obo:OBI_0000093 ;
-    sio:SIO_000356 :sampling_process_ .
+    sio:SIO_000356 :sample_collection_process_ .
 
-:specimen_ a sio:SIO_010412 ;
-  sio:SIO_000228 :role_2 .
+:sample_collection_process_ a obo:OBI_0000659;
+  sio:SIO_000229 :specimen_ .    
 
-:role_2 a obo:OBI_0000112 ;
-  sio:SIO_000356 :sampling_process_ .
+:specimen_ a sio:SIO_010412 .
 
 :biobank_ a obo:OMIABIS_0000010 ;
   dc:title "UK BioBank"^^xsd:string ;
-  sio:SIO_000228 :role_3 .
+  sio:SIO_000228 :role_2 .
   
-:role_3 a obo:OBI_0000947 ;
-  sio:SIO_000356 :sampling_process_ .
-
-:sampling_process_ a obo:OMIABIS_0000061 .
+:role_2 a obo:OBI_0000947 ;
+  sio:SIO_000356 :sample_storing_process_ .
+  
+:sample_storing_process_ a obo:ICO_0000060;
+  sio:SIO_000230 :specimen_.
