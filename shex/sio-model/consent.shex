@@ -20,6 +20,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 }
 
 :outputShape IRI {
-  a [sio:SIO_000785];
-  a [obo:NCIT_C49488 obo:NCIT_C49487]
+  a [sio:SIO_000340];
+  a [obo:OPMI_0000023 obo:OPMI_0000024]
 }

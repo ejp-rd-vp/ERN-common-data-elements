@@ -20,6 +20,6 @@
     sio:SIO_000229 :output_2 ;
     sio:SIO_000680 "2020-10-18T13:03:00"^^xsd:dateTime .
     
-:output_1 a sio:SIO_000785, obo:NCIT_C49488 .
+:output_1 a sio:SIO_000340, obo:OPMI_0000023 .
 
-:output_2 a sio:SIO_000785, obo:NCIT_C49487.
+:output_2 a sio:SIO_000340, obo:OPMI_0000024 .
