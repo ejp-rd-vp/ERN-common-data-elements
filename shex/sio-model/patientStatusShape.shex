@@ -21,10 +21,10 @@ PREFIX hl7: <http://purl.bioontology.org/ontology/HL7/>
 }
 
 :outputShape IRI {
-  a [obo:PATO_0001422 obo:PATO_0001421  snomedct:399307001 hl7:C4291647]
+  a [sio:SIO_010059  sio:SIO_010058   obo:NCIT_C70740 obo:NCIT_C124784]
 }
 
 :statusQualityShape IRI {
-  a [obo:NCIT_C25688];
+  a [sio:SIO_010057];
   sio:SIO_000642 @:outputShape
 }

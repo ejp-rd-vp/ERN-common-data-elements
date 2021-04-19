@@ -20,6 +20,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 }
 
 :variantShape IRI {
-  a [obo:VariO_0138] ;
+  a [sio:SIO_001381] ;
   rdfs:label xsd:string
 }

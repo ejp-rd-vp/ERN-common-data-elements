@@ -8,36 +8,28 @@ PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
 
 :personShape IRI {
   a [sio:SIO_000498];
+  sio:SIO_000228 @:personRoleDiagnosisShape;
+  sio:SIO_000228 @:personRoleSymptomShape;
   sio:SIO_000228 @:personRoleShape;
-  sio:SIO_000217 @:ageAtDiagnosisQualityShape;
-  sio:SIO_000217 @:symptomOnsetQualityShape
+  sio:SIO_000217 @:qualityShape
 }
 
-:personRoleShape IRI {
+:personRoleDiagnosisShape IRI {
   a [obo:OBI_0000093];
-  sio:SIO_000356 @:processShape +
+  sio:SIO_000356 @:processDiagnosisShape
 }
 
-:processShape IRI {
-  (a [sio:SIO_000006];
-  sio:SIO_000230 @:outputReferToDiseaseShape;
-  sio:SIO_000229 @:outputShape
-  |
+:processDiagnosisShape IRI {
   a [sio:SIO_001001];
-  sio:SIO_000229 @:outputReferToDiseaseShape
-  );
-  sio:SIO_000680 xsd:dateTime
+  sio:SIO_000680 xsd:dateTime;
+  sio:SIO_000229 @:outputMedicalDiagnosisShape
 }
 
-:outputShape IRI {
-  a [sio:SIO_000340];
-  a [loinc:LP91394-4 snomedct:263675000 snomedct:373068000]
-}
-
-:outputReferToDiseaseShape IRI {
+:outputMedicalDiagnosisShape IRI {
   a [sio:SIO_000340];
   a [sio:SIO_000015];
-  sio:SIO_000628 @:diseaseShape
+  sio:SIO_000628 @:diseaseShape;
+  sio:SIO_000300 xsd:string
 }
 
 :diseaseShape IRI {
@@ -45,12 +37,53 @@ PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
 }
 
 
-:ageAtDiagnosisQualityShape IRI {
-  a [obo:NCIT_C156420];
-  sio:SIO_000216 @:outputShape
+:personRoleSymptomShape IRI {
+  a [obo:OBI_0000093];
+  sio:SIO_000356 @:processSymptomShape
 }
 
-:symptomOnsetQualityShape IRI {
+
+:processSymptomShape IRI {
+  a [obo:NCIT_C17747];
+  sio:SIO_000628 @:outputMedicalDiagnosisShape;
+  sio:SIO_000008 @:outputSymptomOnsetShape 
+}
+
+:outputSymptomOnsetShape IRI {
   a [obo:NCIT_C124353];
-  sio:SIO_000216 @:outputShape
+  sio:SIO_000628 @:outputOnsetTypeShape
+}
+
+:outputOnsetTypeShape IRI {
+  a [obo:HP_0030674 obo:HP_0003577 obo:NCIT_C124294]
+}
+
+
+:personRoleShape IRI {
+  a [obo:OBI_0000093];
+  sio:SIO_000356 @:processShape
+}
+
+:processShape IRI {
+  a [sio:SIO_000006];
+  sio:SIO_000680 xsd:dateTime;
+  sio:SIO_000628 @:outputMedicalDiagnosisShape;
+  sio:SIO_000229 @:outputQualityShape 
+}
+
+:outputQualityShape IRI {
+  a [sio:SIO_000070];
+  sio:SIO_000300 xsd:integer; 
+  sio:SIO_000221 @:unitShape 
+}
+
+:unitShape IRI {
+  a [obo:UO_0000036]
+}
+
+:qualityShape IRI {
+  a [obo:NCIT_C156420];
+  a [sio:SIO_000005];
+  sio:SIO_000216 @:outputQualityShape;
+  sio:SIO_000628 @:outputMedicalDiagnosisShape
 }

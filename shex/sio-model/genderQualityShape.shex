@@ -1,31 +1,30 @@
 PREFIX : <http://purl.org/ejp-rd/cde/v020/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
 
 
 :personShape IRI {
   a [sio:SIO_000498];
   sio:SIO_000228 @:personRoleShape;
-  sio:SIO_000217 @:genderQualityShape
+  sio:SIO_000217 @:sexQualityShape
 }
 
 :personRoleShape IRI {
   a [obo:OBI_0000093];
-  sio:SIO_000356 @:genderProcessShape
+  sio:SIO_000356 @:sexProcessShape
 }
 
-:genderQualityShape IRI {
-  a [obo:NCIT_C17357];
-  sio:SIO_000642 @:genderOutputShape
+:sexQualityShape IRI {
+  a [obo:NCIT_C28421];
+  sio:SIO_000642 @:sexOutputShape
 }
 
-:genderProcessShape IRI {
+:sexProcessShape IRI {
   a [sio:SIO_000006];
-  sio:SIO_000229 @:genderOutputShape
+  sio:SIO_000229 @:sexOutputShape
 }
 
-:genderOutputShape IRI {
+:sexOutputShape IRI {
   a [sio:SIO_000340];
-  a [snomedct:703118005 snomedct:394743007 snomedct:394744001 snomedct:703117000]
+  a [obo:NCIT_C16576 obo:NCIT_C20197 obo:NCIT_C124294 obo:NCIT_C17998]
 }

@@ -11,16 +11,16 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
 :roleShape IRI {
   a [obo:OBI_0000093];
-  sio:SIO_000356 @:samplingCollectionShape
+  sio:SIO_000356 @:sampleCollectionShape
 }
 
-:samplingCollectionShape IRI {
+:sampleCollectionShape IRI {
   a [obo:OBI_0000659];
   sio:SIO_000229 @:specimenShape
 }
 
 :specimenShape IRI {
-  a [sio:SIO_010412] 
+  a [obo:OBI_0100051] 
 }
 
 :biobankShape IRI {
@@ -31,10 +31,10 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 
 :biobankRoleShape IRI {
   a [obo:OBI_0000947];
-  sio:SIO_000356 @:samplingStorageShape
+  sio:SIO_000356 @:sampleStorageShape
 }
 
-:samplingStorageShape IRI {
+:sampleStorageShape IRI {
   a [obo:ICO_0000060];
   sio:SIO_000230 @:specimenShape
 }
