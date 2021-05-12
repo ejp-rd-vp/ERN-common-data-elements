@@ -1,8 +1,6 @@
 PREFIX : <http://purl.org/ejp-rd/cde/v020/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
-PREFIX hl7: <http://purl.bioontology.org/ontology/HL7/>
 
 :personShape IRI {
   a [sio:SIO_000498];
