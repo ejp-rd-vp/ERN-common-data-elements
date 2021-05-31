@@ -29,4 +29,4 @@ You can browse different CDE modules by visiting the links below.
 * [Disability](docs/disability.md) - describes disability score of a subject
 
 ## Acknowledgement
-This work is funded [European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)
+This work is funded by [European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)
