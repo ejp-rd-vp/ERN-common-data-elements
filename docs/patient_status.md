@@ -67,8 +67,8 @@ An example rdf of person's dead date
 Person's status
 
 <p align="center">
-    <a href="../images//3_Patient_status.png" target="_blank">
-        <img src="../images//3_Patient_status.png">
+    <a href="../images/shex/3_Patient_status.png" target="_blank">
+        <img src="../images/shex/3_Patient_status.png">
     </a>
 </p>
 
