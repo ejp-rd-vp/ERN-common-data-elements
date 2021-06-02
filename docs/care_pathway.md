@@ -10,7 +10,7 @@
 
 ***
 
-### Example rdf (turtle)
+### Example RDF (turtle)
 
 ```ttl
 @prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .

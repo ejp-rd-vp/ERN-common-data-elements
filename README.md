@@ -9,7 +9,7 @@ In this work we present a semantic data model for [the set of common data elemen
 
 ## CDE modules overview
 
-The figure below gives an overview of upper level concepts and properties used in our cde models.
+The figure below gives an overview of upper level concepts and properties used in our cde model.
 
 <p align="center"> 
 	<img src="images/rdf/Annotated General model SIO.png"> 

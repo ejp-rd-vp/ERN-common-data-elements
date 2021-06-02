@@ -9,9 +9,9 @@
 
 ***
 
-### Example rdf (turtle)
+### Example RDF (turtle)
 
-An example rdf of person's birthdate
+An example RDF of person's birthdate
 
 ```ttl
 @prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
@@ -36,7 +36,7 @@ An example rdf of person's birthdate
   sio:SIO_000300 "2020-02-31T12:00:00"^^xsd:dateTime . # has value
 ```
 
-An example rdf of person's gender
+An example RDF of person's gender
 
 ```ttl
 

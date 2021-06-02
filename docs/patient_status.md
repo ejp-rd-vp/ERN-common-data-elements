@@ -9,9 +9,9 @@
 
 ***
 
-### Example rdf (turtle)
+### Example RDF (turtle)
 
-An example rdf of person's status
+An example RDF of person's status
 
 ```ttl
 @prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
@@ -34,7 +34,7 @@ An example rdf of person's status
   sio:SIO_000642 :output_ .
 ```
 
-An example rdf of person's dead date
+An example RDF of person's dead date
 
 ```ttl
 @prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
