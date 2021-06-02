@@ -1,0 +1,97 @@
+### Semantic model figure
+
+<p align="center">
+    <a href="../images/rdf/9_Biobanks.png" target="_blank">
+        <img src="../images/rdf/9_Biobanks.png">
+    </a>
+</p>
+
+***
+
+### Example RDF (turtle)
+
+```ttl
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> . 
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :role_1.
+    
+ :role_1 a obo:OBI_0000093 ;
+    sio:SIO_000356 :sample_collection_process_ .
+
+:sample_collection_process_ a obo:OBI_0000659;
+  sio:SIO_000229 :specimen_ .    
+
+:specimen_ a sio:SIO_010412 .
+
+:biobank_ a obo:OMIABIS_0000010 ;
+  dc:title "UK BioBank"^^xsd:string ;
+  sio:SIO_000228 :role_2 .
+  
+:role_2 a obo:OBI_0000947 ;
+  sio:SIO_000356 :sample_storing_process_ .
+  
+:sample_storing_process_ a obo:ICO_0000060;
+  sio:SIO_000230 :specimen_.
+```
+
+***
+
+### Validation artifacts 
+##### ShEx figure
+
+<p align="center">
+    <a href="../images/shex/9_Biobanks.png" target="_blank">
+        <img src="../images/shex/9_Biobanks.png">
+    </a>
+</p>
+
+***
+##### ShEx
+
+``` ShEx
+PREFIX : <http://purl.org/ejp-rd/cde/v020/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+:personShape IRI { 
+  a [sio:SIO_000498];
+  sio:SIO_000228 @:roleShape
+}
+
+:roleShape IRI {
+  a [obo:OBI_0000093];
+  sio:SIO_000356 @:samplingCollectionShape
+}
+
+:samplingCollectionShape IRI {
+  a [obo:OBI_0000659];
+  sio:SIO_000229 @:specimenShape
+}
+
+:specimenShape IRI {
+  a [sio:SIO_010412] 
+}
+
+:biobankShape IRI {
+  a [obo:OMIABIS_0000010] ;
+  dc:title xsd:string;
+  sio:SIO_000228 @:biobankRoleShape
+}
+
+:biobankRoleShape IRI {
+  a [obo:OBI_0000947];
+  sio:SIO_000356 @:samplingStorageShape
+}
+
+:samplingStorageShape IRI {
+  a [obo:ICO_0000060];
+  sio:SIO_000230 @:specimenShape
+}
+```
