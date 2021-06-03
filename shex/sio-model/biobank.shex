@@ -35,6 +35,6 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 }
 
 :sampleStorageShape IRI {
-  a [obo:ICO_0000060];
+  a [obo:OBI_0302893 ];
   sio:SIO_000230 @:specimenShape
 }
