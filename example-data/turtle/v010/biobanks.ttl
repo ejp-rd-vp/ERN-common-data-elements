@@ -1,8 +1,0 @@
-@prefix : <http://purl.org/ejp-rd/cde/v010/example-rdf/> .
-@prefix obo: <http://purl.obolibrary.org/obo/> . 
-@prefix rdc: <http://rdf.biosemantics.org/ontologies/rd-connect/> .
-
-:person1 a obo:NCBITaxon_9606;
-  rdc:6c9783cd_d632_4e8b_bc0c_a83ea200f1b1 :biobank1 .
-
-:biobank1 a obo:OMIABIS_0000010 .
