@@ -1,0 +1,40 @@
+@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :consentrole_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
+
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 role_ ;
+    sio:SIO:000008 attribute_ .
+
+:consentrole_  a obo:OBI_0000093, a sio:SIO_000016;
+    rdfs:label "Patient for status recording"^^xsd:string;
+    sio:SIO_000356 :consentprocess_ .
+
+:consentprocess_ a obo:OBI_0000810 ;
+    rdfs:label "consenting process"^^xsd:string;
+    sio:SIO_000229 :consentoutput_ ;
+    sio:SIO_000230 :consentoutput2_ ;
+    sio:SIO_000669 "1999-01-01"^^xsd:date .
+
+:consentoutput_ a sio:SIO_000015, obo:ICO_0000001;
+    rdfs:label "Patient Consent Record"^^xsd:string ;
+    sio:SIO_000300 "general research use"^^xsd:string ;
+    sio:SIO_000669 "1999-01-01"^^xsd:date.    
+
+
+
+:consentoutput2_ a sio:SIO_000015;
+    rdfs:label "information content entity"^^xsd:string ;
+    sio:SIO_000300 "http://example.org/my_consent_document"^^xsd:string;
+    sio:SIO_000628 :consentattribute_ .
+
+
+:consentattribute_ a SIO:000614, <http://example.org/my_consent_document>.
+

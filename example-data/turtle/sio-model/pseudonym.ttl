@@ -5,11 +5,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-:person_ a sio:SIO_000498 ; # :person_ a sio:person ;
-  sio:SIO_000228 :role_ . # sio:has-role :role_ .
+:person_ a sio:SIO_000498 ;
+  sio:SIO_000228 :role_ .
 
-:role_ a obo:OBI_0000093 . # :role_ a obo:patient_role .
+:role_ a obo:OBI_0000093 .
 
-:identifier_ a edam:data_0842 ; # :identifier_ a edam:identifier ;
-  sio:SIO_000020 :role_ ; # sio:denotes :role_ ;
-  sio:SIO_000300 "1234567890"^^xsd:string . # sio:has-value "1234567890"^^xsd:string .
+:identifier_ a sio:SIO_000115 ; 
+  sio:SIO_000020 :role_ ;
+  sio:SIO_000300 "1234567890"^^xsd:string .
