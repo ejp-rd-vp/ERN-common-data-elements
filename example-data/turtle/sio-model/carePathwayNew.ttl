@@ -22,3 +22,4 @@
 :carepathwayprocess_ a sio:SIO_000006, obo:NCIT_C159705 ;
     rdfs:label "first contact with specialized center"^^xsd:string;
     sio:SIO_000669 "1995-01-01"^^xsd:date .
+
