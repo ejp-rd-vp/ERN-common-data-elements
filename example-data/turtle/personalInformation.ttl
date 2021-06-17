@@ -4,13 +4,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-
-
 :identifier_ a sio:SIO_000115 ;
     sio:SIO_000020 :birthdaterole_ ;
     sio:SIO_000020 :sexrole_ ;
     sio:SIO_000300 "uid_000008"^^xsd:string .
-
 
 :person_ a sio:SIO_000498;
     sio:SIO_000228 birthdaterole_ ;
@@ -18,45 +15,34 @@
     sio:SIO_000228 sexrole_ ;
     sio:SIO:000008 sexattribute_ .
 
-
 :birthdaterole_  a obo:OBI_0000093, a sio:SIO_000016;
     rdfs:label "Patient for age assessment"^^xsd:string;
     sio:SIO_000356 :birthdateprocess_ .
 
-
 :birthdateprocess_ a sio:SIO_000006 ;
     rdfs:label "age measuring process"^^xsd:string;
     sio:SIO_000229 :birthdateoutput_ .
-
 
 :birthdateoutput_ a sio:SIO_000015;
     rdfs:label "Birth Date"^^xsd:string ;
     sio:SIO_000300 "1995-01-01"^^xsd:date;
     sio:SIO_000628 :birthdateattribute_ .
 
-
 :birthdateattribute_ a SIO:000614, obo:NCIT_C68615 ;
     rdfs:label "Birth Date"^^xsd:string .
-
 
 :sexrole_  a obo:OBI_0000093, a sio:SIO_000016;
     rdfs:label "Patient For Gender Assessment"^^xsd:string;
     sio:SIO_000356 :sexprocess_ .
 
-
 :sexprocess_ a sio:SIO_000006 ;
     rdfs:label "sex measuring process"^^xsd:string;
     sio:SIO_000229 :sexoutput_ .
-
 
 :sexoutput_ a sio:SIO_000015;
     rdfs:label "Male"^^xsd:string ;
     sio:SIO_000300 "Male"^^xsd:string;
     sio:SIO_000628 :sexattribute_ .
 
-
 :sexattribute_ a SIO:000614, obo:NCIT_C28421, obo:NCIT_C20197 ;
     rdfs:label "Male"^^xsd:string .
-
-
-

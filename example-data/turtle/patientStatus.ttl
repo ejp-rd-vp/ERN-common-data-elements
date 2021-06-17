@@ -2,40 +2,45 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 
-# An example rdf of person's status
 
-:person_ a sio:SIO_000498 ;
-  sio:SIO_000228 :role_1 ;
-  sio:SIO_000217 :quality_1 . 
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :statusrole_ ;
+    sio:SIO_000020 :deathinformationrole_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
 
-:role_1 a obo:OBI_0000093 ;
-  sio:SIO_000356 :process_1 .
+:person_ a sio:SIO_000498;
+    sio:SIO_000228 statusrole_ ;
+    sio:SIO:000008 statusattribute_ ;
+    sio:SIO:000008 deathinformationattribute_ .
 
-:process_1 a sio:SIO_000006 ;
-  sio:SIO_000229 :output_1 .
+:statusrole_  a obo:OBI_0000093, a sio:SIO_000016;
+    rdfs:label "Patient for status recording"^^xsd:string;
+    sio:SIO_000356 :statusprocess_ ;
+    sio:SIO_000356 :deathinformationprocess_ .
 
-:output_1 a obo:PATO_0001421 .
+:statusprocess_ a sio:SIO_000006, sio:SIO_001052 ;
+    rdfs:label "status process"^^xsd:string;
+    sio:SIO_000229 :statusoutput_ .
 
-:quality_1 a obo:NCIT_C25688 ;
-  sio:SIO_000642 :output_1 .
+:statusoutput_ a sio:SIO_000015;
+    rdfs:label "dead"^^xsd:string ;
+    sio:SIO_000300 "dead"^^xsd:string;
+    sio:SIO_000628 :statusattribute_ .
 
+:statusattribute_ a SIO:000614, sio:SIO_010059 ;
+    rdfs:label "Patient status"^^xsd:string .
 
-# An example rdf of person's dead date
+:deathinformationprocess_ a sio:SIO_000006 ;
+    rdfs:label "death information recording process"^^xsd:string;
+    sio:SIO_000229 :deathinformationoutput_ .
 
-:person_ a sio:SIO_000498 ;
-  sio:SIO_000228 :role_2 ;
-  sio:SIO_000217 :quality_2 . 
+:deathinformationoutput_ a sio:SIO_000015;
+    rdfs:label "patient death information"^^xsd:string ;
+    sio:SIO_000300 "2010-06-08"^^xsd:string ;
+    sio:SIO_000670 "2010-01-01"^^xsd:date ;
+    sio:SIO_000628 :deathinformationattribute_ .
 
-:role_2 a obo:OBI_0000093;
-  sio:SIO_000356 :process_2 .
-
-:process_2 a sio:SIO_000006 ;
-  sio:SIO_000229 :output_2 .
-
-:output_2 a sio:SIO_000340 ;
-  sio:SIO_000300  "1990-01-01T01:12:50"^^xsd:dateTime .
-
-:quality_2 a obo:NCIT_C70810 ;
-  sio:SIO_000642 :output_2 .
+:deathinformationattribute_ a SIO:000614, obo:NCIT_C70810 .

@@ -28,13 +28,9 @@
     sio:SIO_000300 "general research use"^^xsd:string ;
     sio:SIO_000669 "1999-01-01"^^xsd:date.    
 
-
-
 :consentoutput2_ a sio:SIO_000015;
     rdfs:label "information content entity"^^xsd:string ;
     sio:SIO_000300 "http://example.org/my_consent_document"^^xsd:string;
     sio:SIO_000628 :consentattribute_ .
 
-
 :consentattribute_ a SIO:000614, <http://example.org/my_consent_document>.
-
