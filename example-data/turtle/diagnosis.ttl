@@ -34,5 +34,3 @@
 
 :diagnosisattribute_ a SIO:000614, <http://www.orpha.net/ORDO/Orphanet_1400> ;
     rdfs:label "rare non-syndromic central nervous system malformation characterized by complete or near-complete absence of the cerebellum with a normal sized posterior fossa, possibly accompanied by hypoplasia of the brainstem."^^xsd:string .
-
-
