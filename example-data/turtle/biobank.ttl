@@ -15,11 +15,9 @@
     rdfs:label "Patient for biobank sample collection"^^xsd:string;
     sio:SIO_000356 :process_ .
 
-
 :specimenprocess_ a sio:SIO_000006, obo:OBI_0000659;
     rdfs:label "Sample collection process"^^xsd:string;
     sio:SIO_000229 :specimenoutput_ .
-
 
 :specimenoutput_ a sio:SIO_000015, obo:OBI_0100051 ;
     rdfs:label "Specimen"^^xsd:string .
@@ -36,9 +34,6 @@
     rdfs:label "Biobank for sample storage"^^xsd:string;
     sio:SIO_000356 :biobankprocess_ .
 
-
 :biobankprocess_ a sio:SIO_000006, obo:OBI_0302893 ;
     rdfs:label "sample storage process"^^xsd:string;
     sio:SIO_000229 :specimenoutput_ .
-
-
