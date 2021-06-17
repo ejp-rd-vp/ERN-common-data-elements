@@ -30,7 +30,7 @@
     sio:SIO_000669 "1992-01-01"^^xsd:date;
     sio:SIO_000628 :phenotypicattribute_ .
 
-:phenotypicattribute_ a SIO:000614, sio:SIO_0100565, <https://hpo.jax.org/app/browse/term/HP:0001251> .
+:phenotypicattribute_ a SIO:000614, sio:SIO_0100565, obo:HP_0001251.
 
 
 
