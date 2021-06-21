@@ -16,7 +16,7 @@
     rdfs:label "Phenotyping Patient"^^xsd:string;
     sio:SIO_000356 :phenotypicprocess_ .
 
-:phenotypicprocess_ a sio:SIO_000006 ;
+:phenotypicprocess_ a sio:SIO_000006, obo:OBI_0001546;
     rdfs:label "comparative phenotypic assessment"^^xsd:string;
     sio:SIO_000229 :phenotypicoutput_ .
 
