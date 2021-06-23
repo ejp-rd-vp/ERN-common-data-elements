@@ -93,5 +93,4 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000614] ;
     a IRI /^https:\/\/identifiers.org\// ;
     rdfs:label xsd:string
-    
 }

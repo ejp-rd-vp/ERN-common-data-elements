@@ -42,7 +42,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :statusAttributeShape IRI {
-    a [SIO:000614] ;
+    a [sio:SIO_000614] ;
     a [sio:SIO_010059 sio:SIO_010058 obo:NCIT_C70740 obo:NCIT_C124784] ;
     rdfs:label xsd:string
     
@@ -63,6 +63,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :deadDateAttributeShape IRI {
-    a [SIO:000614] ;
+    a [sio:SIO_000614] ;
     a [obo:NCIT_C70810]
 }

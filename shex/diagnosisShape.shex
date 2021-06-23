@@ -14,7 +14,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000498] ;
     sio:SIO_000228 @:medicalDiagnosisRoleShape ;
     sio:SIO:000008 @:medicalDiagnosisAttributeShape
-
 }
 
 :medicalDiagnosisRoleShape IRI {
@@ -41,7 +40,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 }
 
 :medicalDiagnosisAttributeShape IRI {
-    a [SIO:000614] ;
+    a [sio:SIO_000614] ;
     a IRI /^http:\/\/www.orpha.net\/ORDO\/Orphanet_/ ;
     rdfs:label xsd:string
 }

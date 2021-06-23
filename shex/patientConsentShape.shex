@@ -28,7 +28,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     sio:SIO_000669 xsd:date ;
     sio:SIO_000229 @:patientconsentOutputShape ;
     sio:SIO_000230 @:consentOutputShape
-
 }
 
 :patientconsentOutputShape IRI {
