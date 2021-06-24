@@ -14,7 +14,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000498] ;
     sio:SIO_000228 @:geneticRoleShape ;
     sio:SIO:000008 @:hgvsAttributeShape ;
-    sio:SIO:000008 @:omimAttributeShape
+    sio:SIO:000008 @:omimAttributeShape ;
+    sio:SIO:000008 @:hgncAttributeShape
 }
 
 :geneticRoleShape IRI {
@@ -32,7 +33,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000006] ;
     a [obo:NCIT_C15709] ;
     rdfs:label xsd:string ;
-    sio:SIO_000229 @:hgvsOutputShape1
+    sio:SIO_000229 @:hgvsOutputShape
 }
 
 :hgvsOutputShape IRI {
@@ -68,7 +69,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :omimAttributeShape IRI {
     a [sio:SIO_000614] ;
-    a IRI  /^https:\/\/www.omim.org\/entry\//
+    a IRI  /^https:\/\/www.omim.org\/entry\// ;
     rdfs:label xsd:string
     
 }
@@ -79,7 +80,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000006] ;
     a [obo:NCIT_C15709] ;
     rdfs:label xsd:string ;
-    sio:SIO_000229 @:hgncOutputShape3
+    sio:SIO_000229 @:hgncOutputShape
 }
 
 :hgncOutputShape IRI {

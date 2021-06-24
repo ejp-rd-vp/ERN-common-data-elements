@@ -27,7 +27,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [obo:OBI_0000810] ;
     sio:SIO_000669 xsd:date ;
     sio:SIO_000229 @:patientconsentOutputShape ;
-    sio:SIO_000230 @:consentOutputShape
+    sio:SIO_000230 @:consentInputShape
 }
 
 :patientconsentOutputShape IRI {
@@ -38,7 +38,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     sio:SIO_000628 @:consentAttributeShape
 }
 
-:consentOutputShape IRI {
+:consentInputShape IRI {
     a [sio:SIO_000015] ;
     a [obo:ICO_0000001] ;
     rdfs:label xsd:string ;
@@ -47,5 +47,5 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :consentAttributeShape IRI {
     a [sio:SIO_000614] ;
-    a IRI /^http:/
+    a IRI
 }

@@ -20,7 +20,7 @@
 :consentprocess_ a obo:OBI_0000810 ;
     rdfs:label "consenting process"^^xsd:string;
     sio:SIO_000229 :consentoutput_ ;
-    sio:SIO_000230 :consentoutput2_ ;
+    sio:SIO_000230 :consentinput_ ;
     sio:SIO_000669 "1999-01-01"^^xsd:date .
 
 :consentoutput_ a sio:SIO_000015 ;
@@ -29,7 +29,7 @@
     sio:SIO_000669 "1999-01-01"^^xsd:date ; 
     sio:SIO_000628 :consentattribute_ .   
 
-:consentoutput2_ a sio:SIO_000015, obo:ICO_0000001 ;
+:consentinput_ a sio:SIO_000015, obo:ICO_0000001 ;
     rdfs:label "information content entity"^^xsd:string ;
     sio:SIO_000300 "http://example.org/my_consent_document"^^xsd:string .
 
