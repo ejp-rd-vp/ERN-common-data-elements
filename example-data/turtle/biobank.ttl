@@ -3,6 +3,7 @@
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 :identifier_ a sio:SIO_000115 ;
     sio:SIO_000020 :specimenrole_ ;
