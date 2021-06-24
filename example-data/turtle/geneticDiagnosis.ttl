@@ -14,7 +14,7 @@
     sio:SIO_000008 :omimattribute_ ;
     sio:SIO_000008 :hgncattribute_ .
 
-:geneticrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:geneticrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Genetic Diagnosis Patient"^^xsd:string;
     sio:SIO_000356 :hgvsprocess_ ;
     sio:SIO_000356 :omimprocess_ ;

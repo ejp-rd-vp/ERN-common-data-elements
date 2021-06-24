@@ -15,7 +15,7 @@
     sio:SIO_000228 :sexrole_ ;
     sio:SIO_000008 :sexattribute_ .
 
-:birthdaterole_  a obo:OBI_0000093, a sio:SIO_000016;
+:birthdaterole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Patient for age assessment"^^xsd:string;
     sio:SIO_000356 :birthdateprocess_ .
 
@@ -31,7 +31,7 @@
 :birthdateattribute_ a sio:SIO_000614, obo:NCIT_C68615 ;
     rdfs:label "Birth Date"^^xsd:string .
 
-:sexrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:sexrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Patient For Gender Assessment"^^xsd:string;
     sio:SIO_000356 :sexprocess_ .
 

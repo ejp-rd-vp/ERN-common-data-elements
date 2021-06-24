@@ -12,7 +12,7 @@
     sio:SIO_000228 :diagnosisrole_ ;
     sio:SIO_000008 :diagnosisattribute_ .
 
-:diagnosisrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:diagnosisrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Diagnosis Patient"^^xsd:string;
     sio:SIO_000356 :diagnosisprocess_ .
 

@@ -14,7 +14,7 @@
     sio:SIO_000008 :statusattribute_ ;
     sio:SIO_000008 :deathinformationattribute_ .
 
-:statusrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:statusrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Patient for status recording"^^xsd:string;
     sio:SIO_000356 :statusprocess_ ;
     sio:SIO_000356 :deathinformationprocess_ .

@@ -15,7 +15,7 @@
     sio:SIO_000228 :diagnosisdaterole_ ;
     sio:SIO_000008 :diagnosisdateattribute_ .
 
-:symptomonsetrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:symptomonsetrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Symptom Onset Patient"^^xsd:string;
     sio:SIO_000356 :symptomonsetprocess_ .
 
@@ -31,7 +31,7 @@
 :symptomonsetattribute_ a sio:SIO_000614, obo:NCIT_C124353  ;
     rdfs:label "Age at onset"^^xsd:string .
 
-:diagnosisdaterole_  a obo:OBI_0000093, a sio:SIO_000016;
+:diagnosisdaterole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Diagnosis Date Patient"^^xsd:string;
     sio:SIO_000356 :diagnosisdateprocess_ .
 

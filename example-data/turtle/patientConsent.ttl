@@ -12,7 +12,7 @@
     sio:SIO_000228 :role_ ;
     sio:SIO_000008 :attribute_ .
 
-:consentrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:consentrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Patient for status recording"^^xsd:string;
     sio:SIO_000356 :consentprocess_ .
 

@@ -12,7 +12,7 @@
     sio:SIO_000228 :phenotypicrole_ ;
     sio:SIO_000008 :phenotypicattribute_ .
 
-:phenotypicrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:phenotypicrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Phenotyping Patient"^^xsd:string;
     sio:SIO_000356 :phenotypicprocess_ .
 
