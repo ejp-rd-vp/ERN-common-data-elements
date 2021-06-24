@@ -10,9 +10,9 @@
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498;
-    sio:SIO_000228 statusrole_ ;
-    sio:SIO:000008 statusattribute_ ;
-    sio:SIO:000008 deathinformationattribute_ .
+    sio:SIO_000228 :statusrole_ ;
+    sio:SIO_000008 :statusattribute_ ;
+    sio:SIO_000008 :deathinformationattribute_ .
 
 :statusrole_  a obo:OBI_0000093, a sio:SIO_000016;
     rdfs:label "Patient for status recording"^^xsd:string;
@@ -28,7 +28,7 @@
     sio:SIO_000300 "dead"^^xsd:string;
     sio:SIO_000628 :statusattribute_ .
 
-:statusattribute_ a SIO:000614, sio:SIO_010059 ;
+:statusattribute_ a sio:SIO_000614, sio:SIO_010059 ;
     rdfs:label "Patient status"^^xsd:string .
 
 :deathinformationprocess_ a sio:SIO_000006 ;
@@ -41,4 +41,4 @@
     sio:SIO_000670 "2010-01-01"^^xsd:date ;
     sio:SIO_000628 :deathinformationattribute_ .
 
-:deathinformationattribute_ a SIO:000614, obo:NCIT_C70810 .
+:deathinformationattribute_ a sio:SIO_000614, obo:NCIT_C70810 .

@@ -10,7 +10,7 @@
 
 :person_ a sio:SIO_000498;
     sio:SIO_000228 phenotypicrole_ ;
-    sio:SIO:000008 phenotypicattribute_ .
+    sio:SIO_000008 phenotypicattribute_ .
 
 :phenotypicrole_  a obo:OBI_0000093, a sio:SIO_000016;
     rdfs:label "Phenotyping Patient"^^xsd:string;
@@ -25,4 +25,4 @@
     sio:SIO_000669 "1992-01-01"^^xsd:date;
     sio:SIO_000628 :phenotypicattribute_ .
 
-:phenotypicattribute_ a SIO:000614, sio:SIO_0100565, obo:HP_0001251.
+:phenotypicattribute_ a sio:SIO_000614, sio:SIO_0100565, obo:HP_0001251.

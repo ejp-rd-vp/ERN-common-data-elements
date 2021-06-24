@@ -10,10 +10,10 @@
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498;
-    sio:SIO_000228 symptomonsetrole_ ;
-    sio:SIO:000008 symptomonsetattribute_ ;
-    sio:SIO_000228 diagnosisdaterole_ ;
-    sio:SIO:000008 diagnosisdateattribute_ .
+    sio:SIO_000228 :symptomonsetrole_ ;
+    sio:SIO_000008 :symptomonsetattribute_ ;
+    sio:SIO_000228 :diagnosisdaterole_ ;
+    sio:SIO_000008 :diagnosisdateattribute_ .
 
 :symptomonsetrole_  a obo:OBI_0000093, a sio:SIO_000016;
     rdfs:label "Symptom Onset Patient"^^xsd:string;
@@ -28,7 +28,7 @@
     sio:SIO_000300 "1998-06-08"^^xsd:date;  
     sio:SIO_000628 :symptomonsetattribute_ .
 
-:symptomonsetattribute_ a SIO:000614, obo:NCIT_C124353  ;
+:symptomonsetattribute_ a sio:SIO_000614, obo:NCIT_C124353  ;
     rdfs:label "Age at onset"^^xsd:string .
 
 :diagnosisdaterole_  a obo:OBI_0000093, a sio:SIO_000016;

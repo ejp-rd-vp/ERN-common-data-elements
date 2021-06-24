@@ -10,10 +10,10 @@
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498;
-    sio:SIO_000228 birthdaterole_ ;
-    sio:SIO:000008 birthdateattribute_ ;
-    sio:SIO_000228 sexrole_ ;
-    sio:SIO:000008 sexattribute_ .
+    sio:SIO_000228 :birthdaterole_ ;
+    sio:SIO_000008 :birthdateattribute_ ;
+    sio:SIO_000228 :sexrole_ ;
+    sio:SIO_000008 :sexattribute_ .
 
 :birthdaterole_  a obo:OBI_0000093, a sio:SIO_000016;
     rdfs:label "Patient for age assessment"^^xsd:string;
@@ -28,7 +28,7 @@
     sio:SIO_000300 "1995-01-01"^^xsd:date;
     sio:SIO_000628 :birthdateattribute_ .
 
-:birthdateattribute_ a SIO:000614, obo:NCIT_C68615 ;
+:birthdateattribute_ a sio:SIO_000614, obo:NCIT_C68615 ;
     rdfs:label "Birth Date"^^xsd:string .
 
 :sexrole_  a obo:OBI_0000093, a sio:SIO_000016;
@@ -44,5 +44,5 @@
     sio:SIO_000300 "Male"^^xsd:string;
     sio:SIO_000628 :sexattribute_ .
 
-:sexattribute_ a SIO:000614, obo:NCIT_C28421, obo:NCIT_C20197 ;
+:sexattribute_ a sio:SIO_000614, obo:NCIT_C28421, obo:NCIT_C20197 ;
     rdfs:label "Male"^^xsd:string .
