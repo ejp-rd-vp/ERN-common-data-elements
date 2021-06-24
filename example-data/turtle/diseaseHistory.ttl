@@ -4,56 +4,47 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-
-
 :identifier_ a sio:SIO_000115 ;
     sio:SIO_000020 :symptomonsetrole_ ;
     sio:SIO_000020 :diagnosisdaterole_ ;
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
-
 :person_ a sio:SIO_000498;
-    sio:SIO_000228 symptomonsetrole_ ;
-    sio:SIO:000008 symptomonsetattribute_ ;
-    sio:SIO_000228 diagnosisdaterole_ ;
-    sio:SIO:000008 diagnosisdateattribute_ .
+    sio:SIO_000228 :symptomonsetrole_ ;
+    sio:SIO_000008 :symptomonsetattribute_ ;
+    sio:SIO_000228 :diagnosisdaterole_ ;
+    sio:SIO_000008 :diagnosisdateattribute_ .
 
-
-:symptomonsetrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:symptomonsetrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Symptom Onset Patient"^^xsd:string;
     sio:SIO_000356 :symptomonsetprocess_ .
-
 
 :symptomonsetprocess_ a sio:SIO_000006, sio:SIO_001052 ;
     rdfs:label "data collection - symptom onset date recording process"^^xsd:string;
     sio:SIO_000229 :symptomonsetoutput_ .
-
 
 :symptomonsetoutput_ a sio:SIO_000015, obo:HP_0030674;
     rdfs:label "date of onset (in official CDE this is age of onset)"^^xsd:string ;
     sio:SIO_000300 "1998-06-08"^^xsd:date;  
     sio:SIO_000628 :symptomonsetattribute_ .
 
-:symptomonsetattribute_ a SIO:000614, obo:NCIT_C124353  ;
+:symptomonsetattribute_ a sio:SIO_000614, obo:NCIT_C124353  ;
     rdfs:label "Age at onset"^^xsd:string .
 
-
-:diagnosisdaterole_  a obo:OBI_0000093, a sio:SIO_000016;
+:diagnosisdaterole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Diagnosis Date Patient"^^xsd:string;
     sio:SIO_000356 :diagnosisdateprocess_ .
-
 
 :diagnosisdateprocess_ a sio:SIO_000006, sio:SIO_SIO_001052 ;
     rdfs:label "data collection - diagnosis date recording process"^^xsd:string;
     sio:SIO_000229 :diagnosisdateoutput_ .
-
 
 :diagnosisdateoutput_ a sio:SIO_000015, obo:HP_0030674;
     rdfs:label "age at diagnosis"^^xsd:string ;
     sio:SIO_000300 "1999-06-08"^^xsd:date;
     sio:SIO_000628 :diagnosisdateattribute_ .
 
-:diagnosisdateattribute_ a SIO:000614, obo:NCIT_C156420 ;
+:diagnosisdateattribute_ a sio:SIO_000614, obo:NCIT_C156420 ;
     rdfs:label "Age at diagnosis"^^xsd:string .
 
 

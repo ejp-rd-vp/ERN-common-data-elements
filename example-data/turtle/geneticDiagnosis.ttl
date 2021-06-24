@@ -8,32 +8,28 @@
     sio:SIO_000020 :geneticrole_ ;
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
-
 :person_ a sio:SIO_000498;
-    sio:SIO_000228 geneticrole_ ;
-    sio:SIO:000008 hgvsattribute_ ;
-    sio:SIO:000008 omimattribute_ ;
-    sio:SIO:000008 hgncattribute_ .
+    sio:SIO_000228 :geneticrole_ ;
+    sio:SIO_000008 :hgvsattribute_ ;
+    sio:SIO_000008 :omimattribute_ ;
+    sio:SIO_000008 :hgncattribute_ .
 
-
-:geneticrole_  a obo:OBI_0000093, a sio:SIO_000016;
+:geneticrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Genetic Diagnosis Patient"^^xsd:string;
     sio:SIO_000356 :hgvsprocess_ ;
     sio:SIO_000356 :omimprocess_ ;
     sio:SIO_000356 :hgncprocess_ .
 
-
 :hgvsprocess_ a sio:SIO_000006, obo:NCIT_C15709 ;
     rdfs:label "genetic testing"^^xsd:string;
     sio:SIO_000229 :hgvsoutput_ .
-
 
 :hgvsoutput_ a sio:SIO_000015, sio:SIO_001381;
     rdfs:label "HGVS genome sequence variant"^^xsd:string ;
     sio:SIO_000300 "NM_004006.3:c.4375C>T"^^xsd:string;
     sio:SIO_000628 :hgvsattribute_ .
 
-:hgvsattribute_ a SIO:000614, obo:NCIT_C172243 ;
+:hgvsattribute_ a sio:SIO_000614, obo:NCIT_C172243 ;
     rdfs:label "NM_004006.3:c.4375C>T"^^xsd:string .
 
 
@@ -41,26 +37,22 @@
     rdfs:label "genetic testing"^^xsd:string;
     sio:SIO_000229 :omimoutput_ .
 
-
 :omimoutput_ a sio:SIO_000015, sio:SIO_001381;
     rdfs:label "OMIM genome sequence variant"^^xsd:string ;
     sio:SIO_000300 "192977"^^xsd:string;
     sio:SIO_000628 :omimattribute_ .
 
-:omimattribute_ a SIO:000614, <https://www.omim.org/entry/192977> ;
+:omimattribute_ a sio:SIO_000614, <https://www.omim.org/entry/192977> ;
     rdfs:label "192977"^^xsd:string .
-
-
 
 :hgncprocess_ a sio:SIO_000006, obo:NCIT_C15709 ;
     rdfs:label "genetic testing"^^xsd:string;
     sio:SIO_000229 :hgncoutput_ .
-
 
 :hgncoutput_ a sio:SIO_000015, sio:SIO_001381;
     rdfs:label "HGNC genome sequence variant"^^xsd:string ;
     sio:SIO_000300 "HGNC:12698"^^xsd:string;
     sio:SIO_000628 :hgncattribute_ .
 
-:hgncattribute_ a SIO:000614, <https://identifiers.org/HGNC:12698> ;
+:hgncattribute_ a sio:SIO_000614, <https://identifiers.org/HGNC:12698> ;
     rdfs:label "HGNC:12698"^^xsd:string .
