@@ -4,8 +4,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-
-
 :identifier_ a sio:SIO_000115 ;
     sio:SIO_000020 :statusrole_ ;
     sio:SIO_000020 :deathinformationrole_ ;
