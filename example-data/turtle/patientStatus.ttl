@@ -41,4 +41,4 @@
     sio:SIO_000628 :deathinformationattribute_ .
 
 :deathinformationattribute_ a sio:SIO_000614, obo:NCIT_C70810 ;
-    rdfs:label "Death of death"^^xsd.string .
+    rdfs:label "Death of death"^^xsd:string .
