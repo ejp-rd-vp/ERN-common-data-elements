@@ -10,4 +10,4 @@
 
 :identifier_ a sio:SIO_000115 ; 
   sio:SIO_000020 :role_ ;
-  sio:SIO_000300 "1234567890"^^xsd:string .
+  sio:SIO_000300 "uid_000008"^^xsd:string .

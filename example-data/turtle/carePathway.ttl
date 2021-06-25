@@ -11,7 +11,7 @@
 :person_ a sio:SIO_000498;
     sio:SIO_000228 :carepathwayrole_ .
 
-:role_  a obo:OBI_0000093, sio:SIO_000016;
+:carepathwayrole_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "First Contact Patient"^^xsd:string;
     sio:SIO_000356 :carepathwayprocess_ .
 

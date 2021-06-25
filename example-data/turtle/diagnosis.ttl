@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 :identifier_ a sio:SIO_000115 ;
-    sio:SIO_000020 :role_ ;
+    sio:SIO_000020 :diagnosisrole_ ;
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498;
