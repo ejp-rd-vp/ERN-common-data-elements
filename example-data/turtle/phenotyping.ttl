@@ -12,12 +12,12 @@
     sio:SIO_000228 :phenotypicrole_ ;
     sio:SIO_000008 :phenotypicattribute_ .
 
-:phenotypicrole_  a obo:OBI_0000093, sio:SIO_000016;
+:phenotypicrole_  a obo:OBI_0000093, sio:SIO_000016 ;
     rdfs:label "Phenotyping Patient"^^xsd:string;
     sio:SIO_000356 :phenotypicprocess_ .
 
-:phenotypicprocess_ a sio:SIO_000006, obo:OBI_0001546;
-    rdfs:label "comparative phenotypic assessment"^^xsd:string;
+:phenotypicprocess_ a sio:SIO_000006, obo:OBI_0001546, obo:NCIT_C16205, obo:NCIT_C18020 ;
+    rdfs:label "comparative phenotypic assessment"^^xsd:string ;
     sio:SIO_000229 :phenotypicoutput_ .
 
 :phenotypicoutput_ a sio:SIO_000015, obo:NCIT_C102741 ;
@@ -25,4 +25,5 @@
     sio:SIO_000669 "1992-01-01"^^xsd:date;
     sio:SIO_000628 :phenotypicattribute_ .
 
-:phenotypicattribute_ a sio:SIO_000614, sio:SIO_0100565, obo:HP_0001251.
+:phenotypicattribute_ a sio:SIO_000614, sio:SIO_0100565, obo:HP_0001251 ;
+    rdfs:label "Cerebellar ataxia"^^xsd:string .
