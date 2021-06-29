@@ -3,26 +3,36 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :undiagnosedrole_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498 ;
-    sio:SIO_000228 :role_1 ;
-    sio:SIO_000228 :role_2 .
+    sio:SIO_000228 :undiagnosedrole ;
+    sio:SIO_000008 :undiagnosedattribute_ .
 
-:role_1 a obo:OBI_0000093 ;
-    sio:SIO_000356 :process_1 .    
+:undiagnosedrole_ a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Patient"^^xsd:string ;
+    sio:SIO_000356 :undiagnosedprocess_ .    
     
-:process_1 a obo:NCIT_C15709 ;
-    sio:SIO_000229 :variant_ .
+:undiagnosedprocess_ a sio:SIO_000006, sio:SIO_001001 ;
+    rdfs:label "medical diagnosis"^^xsd:string ;
+    sio:SIO_000031 "1998-04-06"^^xsd:date ;
+    sio:SIO_000230 :phenotypeinput_ ;
+    sio:SIO_000230 :genotypeinput_ ;
+    sio:SIO_000229 :undiagnosedoutput_ .
     
-:variant_ a obo:VariO_0138;
-    rdfs:label "NG_007148.2:g.146889G>A" .
-    
-    
-:role_2 a obo:OBI_0000093 ;
-    sio:SIO_000356 :process_2 .    
-    
-:process_2 a obo:NCIT_C16205 ;
-    sio:SIO_000229 :phenotype_ .
-    
-:phenotype_ a obo:HP_0001249 .    
+:undiagnosedoutput_ a sio:SIO_000015 ;
+    rdfs:label "Undiagnosed"^^xsd:string ;
+    sio:SIO_000628 :undiagnosedattribute_ .
+
+:undiagnosedattribute_ a sio:SIO_000614, obo:NCIT_C113725 ;
+    rdfs:label "Undiagnosed"^^xsd:string .
+
+:phenotypeinput_ a sio:SIO_000015, <http://purl.obolibrary.org/obo/HP_0001251> ;
+    rdfs:label "Cerebellar ataxia"^^xsd:string .
+
+:genotypeinput_ a sio:SIO_000015, <https://identifiers.org/clinvar:4886> ;
+    rdfs:label "NM_003977.4(AIP):c.40C>T (p.Gln14Ter)"^^xsd:string .
