@@ -41,5 +41,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 :phenotypeAttributeShape IRI {
     a [sio:SIO_000614] ;
     a [sio:SIO_010056] ;
-    a IRI /^http:\/\/purl.obolibrary.org\/obo\/HP_/
+    a IRI /^http:\/\/purl.obolibrary.org\/obo\/HP_/ ;
+    rdfs:label xsd:string?
 }
