@@ -63,5 +63,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :deadDateAttributeShape IRI {
     a [sio:SIO_000614] ;
-    a [obo:NCIT_C70810]
+    a [obo:NCIT_C70810] ;
+    rdfs:label xsd:string? 
 }
