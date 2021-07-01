@@ -18,17 +18,18 @@
 :lab_data_process_ a obo:NCIT_C48937 ;
     rdfs:label "Quantitation"^^xsd:string ;
     sio:SIO_000031 "2019-02-28"^^xsd:date ;
-    sio:SIO_000230 :lab_data_output_ ;
-    sio:SIO_000229 :lab_data_output2_ ; 
-    sio:SIO_000291 :lab_data_target_ .
+    sio:SIO_000230 :lab_data_input_ ;
+    sio:SIO_000229 :lab_data_output_ ; 
+    sio:SIO_000291 :lab_data_target_ ;
+    sio:CHEMINF_000047 <https://dx.doi.org/10.17504/protocols.io.yy3fxyn> .
 
-:lab_data_output_ a sio:SIO_000015, obo:NCIT_C12434 ;
+:lab_data_input_ a sio:SIO_000015, obo:NCIT_C12434 ;
     rdfs:label "blood"^^xsd:string .
 
 :lab_data_target_ a sio:SIO_000015, obo:NCIT_C16676 ;
     rdfs:label "hemoglobin"^^xsd:string .
 
-:lab_data_output2_ a sio:SIO_000015 ;
+:lab_data_output_ a sio:SIO_000015 ;
     rdfs:label "measurement value"^^xsd:string ;
     sio:SIO_000300 "13"^^xsd:float ;
     rdfs:comment "blood collected early morning"^^xsd:string ;
@@ -36,3 +37,6 @@
 
 :lab_data_unit_ a obo:UO_0000208 ;
     rdfs:label "grams per decilitre"^^xsd:string .
+
+<https://dx.doi.org/10.17504/protocols.io.yy3fxyn> a sio:SIO_000015, obo:NCIT_C42651 ;
+    rdfs:label "Protocol"^^xsd:string .
