@@ -18,16 +18,16 @@
 
 :body_measurement_process_ a sio:SIO_000006, obo:NCIT_C25498 ;
    rdfs:label "Estimation"^^xsd:string ;
-   sio:SIO_000031 "2019-02-28"^^xsd:date ;
-   sio:SIO_000229 :body_measurement_output_ .
+   sio:SIO_000680 :body_measurement_startdate_ ;
+   sio:SIO_000229 :body_measurement_output_ ;
+   sio:CHEMINF_000047 <https://dx.doi.org/10.17504/protocols.io.xabcdef> .
 
 :body_measurement_output_ a sio:SIO_000015 ;
     rdfs:label "measurement value"^^xsd:string ;
     sio:SIO_000300 "95"^^xsd:string ;
     rdfs:comment "Estimated by visual inspection"^^xsd:string ;
     sio:SIO_000221 :body_measurement_unit_ ;
-    sio:SIO_000628 :body_measurement_attribute_ ;
-    sio:CHEMINF_000047 <https://dx.doi.org/10.17504/protocols.io.xabcdef> .
+    sio:SIO_000628 :body_measurement_attribute_ .
 
 :body_measurement_unit_ a obo:UO_0000009 ;
     rdfs:label "kg"^^xsd:string .
@@ -37,3 +37,6 @@
 
 <https://dx.doi.org/10.17504/protocols.io.xabcdef> a sio:SIO_000015, obo:NCIT_C42651 ;
     rdfs:label "Protocol"^^xsd:string .
+
+:body_measurement_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "2019-02-28"^^xsd:date .

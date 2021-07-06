@@ -5,33 +5,36 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 :identifier_ a sio:SIO_000115 ;
-    sio:SIO_000020 :undiagnosedrole_ ;
+    sio:SIO_000020 :undiagnosed_role_ ;
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498 ;
-    sio:SIO_000228 :undiagnosedrole ;
-    sio:SIO_000008 :undiagnosedattribute_ .
+    sio:SIO_000228 :undiagnosed_role_ ;
+    sio:SIO_000008 :undiagnosed_attribute_ .
 
-:undiagnosedrole_ a obo:OBI_0000093, sio:SIO_000016 ;
+:undiagnosed_role_ a obo:OBI_0000093, sio:SIO_000016 ;
     rdfs:label "Patient"^^xsd:string ;
-    sio:SIO_000356 :undiagnosedprocess_ .    
+    sio:SIO_000356 :undiagnosed_process_ .    
     
-:undiagnosedprocess_ a sio:SIO_000006, sio:SIO_001001 ;
+:undiagnosed_process_ a sio:SIO_000006, sio:SIO_001001 ;
     rdfs:label "medical diagnosis"^^xsd:string ;
-    sio:SIO_000031 "1998-04-06"^^xsd:date ;
-    sio:SIO_000230 :phenotypeinput_ ;
-    sio:SIO_000230 :genotypeinput_ ;
-    sio:SIO_000229 :undiagnosedoutput_ .
+    sio:SIO_000680 :undiagnosed_startdate_ ;
+    sio:SIO_000230 :phenotype_input_ ;
+    sio:SIO_000230 :genotype_input_ ;
+    sio:SIO_000229 :undiagnosed_output_ .
     
-:undiagnosedoutput_ a sio:SIO_000015 ;
+:undiagnosed_output_ a sio:SIO_000015 ;
     rdfs:label "Undiagnosed"^^xsd:string ;
-    sio:SIO_000628 :undiagnosedattribute_ .
+    sio:SIO_000628 :undiagnosed_attribute_ .
 
-:undiagnosedattribute_ a sio:SIO_000614, obo:NCIT_C113725 ;
+:undiagnosed_attribute_ a sio:SIO_000614, obo:NCIT_C113725 ;
     rdfs:label "Undiagnosed"^^xsd:string .
 
-:phenotypeinput_ a sio:SIO_000015, <http://purl.obolibrary.org/obo/HP_0001251> ;
+:phenotype_input_ a sio:SIO_000015, <http://purl.obolibrary.org/obo/HP_0001251> ;
     rdfs:label "Cerebellar ataxia"^^xsd:string .
 
-:genotypeinput_ a sio:SIO_000015, <https://identifiers.org/clinvar:4886> ;
+:genotype_input_ a sio:SIO_000015, <https://identifiers.org/clinvar:4886> ;
     rdfs:label "NM_003977.4(AIP):c.40C>T (p.Gln14Ter)"^^xsd:string .
+
+:undiagnosed_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "1998-04-06"^^xsd:date .

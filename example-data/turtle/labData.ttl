@@ -17,7 +17,7 @@
 
 :lab_data_process_ a obo:NCIT_C48937 ;
     rdfs:label "Quantitation"^^xsd:string ;
-    sio:SIO_000031 "2019-02-28"^^xsd:date ;
+    sio:SIO_000680 :lab_data_startdate_ ;
     sio:SIO_000230 :lab_data_input_ ;
     sio:SIO_000229 :lab_data_output_ ; 
     sio:SIO_000291 :lab_data_target_ ;
@@ -40,3 +40,6 @@
 
 <https://dx.doi.org/10.17504/protocols.io.yy3fxyn> a sio:SIO_000015, obo:NCIT_C42651 ;
     rdfs:label "Protocol"^^xsd:string .
+
+:lab_data_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "2019-02-28"^^xsd:date .
