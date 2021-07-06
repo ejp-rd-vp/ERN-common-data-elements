@@ -5,47 +5,52 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 :identifier_ a sio:SIO_000115 ;
-    sio:SIO_000020 :symptomonsetrole_ ;
-    sio:SIO_000020 :diagnosisdaterole_ ;
+    sio:SIO_000020 :symptom_onset_role_ ;
+    sio:SIO_000020 :diagnosis_date_role_ ;
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498;
-    sio:SIO_000228 :symptomonsetrole_ ;
-    sio:SIO_000008 :symptomonsetattribute_ ;
-    sio:SIO_000228 :diagnosisdaterole_ ;
-    sio:SIO_000008 :diagnosisdateattribute_ .
+    sio:SIO_000228 :symptom_onset_role_ ;
+    sio:SIO_000008 :symptom_onset_attribute_ ;
+    sio:SIO_000228 :diagnosis_date_role_ ;
+    sio:SIO_000008 :diagnosis_date_attribute_ .
 
-:symptomonsetrole_  a obo:OBI_0000093, sio:SIO_000016;
+:symptom_onset_role_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Symptom Onset Patient"^^xsd:string;
-    sio:SIO_000356 :symptomonsetprocess_ .
+    sio:SIO_000356 :symptom_onset_process_ .
 
-:symptomonsetprocess_ a sio:SIO_000006, sio:SIO_001052 ;
+:symptom_onset_process_ a sio:SIO_000006, sio:SIO_001052 ;
     rdfs:label "data collection - symptom onset date recording process"^^xsd:string;
-    sio:SIO_000229 :symptomonsetoutput_ .
+    sio:SIO_000229 :symptom_onset_output_ .
 
-:symptomonsetoutput_ a sio:SIO_000015, obo:HP_0030674;
+:symptom_onset_output_ a sio:SIO_000015, obo:HP_0030674 ;
     rdfs:label "date of onset (in official CDE this is age of onset)"^^xsd:string ;
-    sio:SIO_000300 "1998-06-08"^^xsd:date;  
-    sio:SIO_000628 :symptomonsetattribute_ .
+    sio:SIO_000300 "1998-06-08"^^xsd:date ;  
+    sio:SIO_000679 :symptom_onset_timeboundary_ ;
+    sio:SIO_000628 :symptom_onset_attribute_ .
 
-:symptomonsetattribute_ a sio:SIO_000614, obo:NCIT_C124353  ;
+:symptom_onset_attribute_ a sio:SIO_000614, obo:NCIT_C124353  ;
     rdfs:label "Age at onset"^^xsd:string .
 
-:diagnosisdaterole_  a obo:OBI_0000093, sio:SIO_000016;
-    rdfs:label "Diagnosis Date Patient"^^xsd:string;
-    sio:SIO_000356 :diagnosisdateprocess_ .
+:diagnosis_date_role_  a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Diagnosis Date Patient"^^xsd:string ;
+    sio:SIO_000356 :diagnosis_date_process_ .
 
-:diagnosisdateprocess_ a sio:SIO_000006, sio:SIO_SIO_001052 ;
-    rdfs:label "data collection - diagnosis date recording process"^^xsd:string;
-    sio:SIO_000229 :diagnosisdateoutput_ .
+:diagnosis_date_process_ a sio:SIO_000006, sio:SIO_001052 ;
+    rdfs:label "data collection - diagnosis date recording process"^^xsd:string ;
+    sio:SIO_000229 :diagnosis_date_output_ .
 
-:diagnosisdateoutput_ a sio:SIO_000015, obo:HP_0030674;
+:diagnosis_date_output_ a sio:SIO_000015, obo:HP_0030674 ;
     rdfs:label "age at diagnosis"^^xsd:string ;
-    sio:SIO_000300 "1999-06-08"^^xsd:date;
-    sio:SIO_000628 :diagnosisdateattribute_ .
+    sio:SIO_000300 "1999-06-08"^^xsd:date ;
+    sio:SIO_000679 :diagnosis_date_timeboundary_ ;
+    sio:SIO_000628 :diagnosis_date_attribute_ .
 
-:diagnosisdateattribute_ a sio:SIO_000614, obo:NCIT_C156420 ;
+:diagnosis_date_attribute_ a sio:SIO_000614, obo:NCIT_C156420 ;
     rdfs:label "Age at diagnosis"^^xsd:string .
 
+:symptom_onset_timeboundary_ a sio:SIO_000418 ;
+    sio:SIO_000300 "1998-06-08"^^xsd:date .
 
-
+:diagnosis_date_timeboundary_ a sio:SIO_000418 ;
+    sio:SIO_000300 "1999-06-08"^^xsd:date .

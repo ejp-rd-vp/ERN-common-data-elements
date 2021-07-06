@@ -5,32 +5,35 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 :identifier_ a sio:SIO_000115 ;
-    sio:SIO_000020 :consentrole_ ;
+    sio:SIO_000020 :consent_role_ ;
     sio:SIO_000300 "uid_000008"^^xsd:string .
 
 :person_ a sio:SIO_000498 ;
-    sio:SIO_000228 :consentrole_ ;
-    sio:SIO_000008 :consentattribute_ .
+    sio:SIO_000228 :consent_role_ ;
+    sio:SIO_000008 :consent_attribute_ .
 
-:consentrole_  a obo:OBI_0000093, sio:SIO_000016;
+:consent_role_  a obo:OBI_0000093, sio:SIO_000016;
     rdfs:label "Patient for status recording"^^xsd:string;
-    sio:SIO_000356 :consentprocess_ .
+    sio:SIO_000356 :consent_process_ .
 
-:consentprocess_ a obo:OBI_0000810 ;
+:consent_process_ a obo:OBI_0000810 ;
     rdfs:label "consenting process"^^xsd:string;
-    sio:SIO_000229 :consentoutput_ ;
-    sio:SIO_000230 :consentinput_ ;
-    sio:SIO_000669 "1999-01-01"^^xsd:date .
+    sio:SIO_000229 :consent_output_ ;
+    sio:SIO_000230 :consent_input_ ;
+    sio:SIO_000680 :consent_startdate_ .
 
-:consentoutput_ a sio:SIO_000015 ;
+:consent_output_ a sio:SIO_000015 ;
     rdfs:label "Patient Consent Record"^^xsd:string ;
     sio:SIO_000300 "general research use"^^xsd:string ;
-    sio:SIO_000669 "1999-01-01"^^xsd:date ; 
-    sio:SIO_000628 :consentattribute_ .   
+    sio:SIO_000680 :consent_startdate_ ; 
+    sio:SIO_000628 :consent_attribute_ .   
 
-:consentinput_ a sio:SIO_000015, obo:ICO_0000001 ;
+:consent_input_ a sio:SIO_000015, obo:ICO_0000001 ;
     rdfs:label "information content entity"^^xsd:string ;
     sio:SIO_000300 "http://example.org/my_consent_document"^^xsd:string .
 
-:consentattribute_ a sio:SIO_000614, <http://example.org/my_consent_document> ;
+:consent_attribute_ a sio:SIO_000614, <http://example.org/my_consent_document> ;
     rdfs:label "general research use"^^xsd:string .
+
+:consent_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "1999-01-01"^^xsd:date .
