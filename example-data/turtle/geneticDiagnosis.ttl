@@ -32,7 +32,6 @@
 :hgvs_attribute_ a sio:SIO_000614, obo:NCIT_C172243 ;
     rdfs:label "NM_004006.3:c.4375C>T"^^xsd:string .
 
-
 :omim_process_ a sio:SIO_000006, obo:NCIT_C15709 ;
     rdfs:label "genetic testing"^^xsd:string;
     sio:SIO_000229 :omim_output_ .
