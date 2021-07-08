@@ -26,5 +26,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_000006] ;
     a [obo:NCIT_C159705] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000669 xsd:date
+    sio:SIO_000680 @:carePathwayStartDateShape
+}
+
+:carePathwayStartDateShape IRI {
+    a [sio:SIO_000031] ;
+    sio:SIO_000300 xsd:date
 }

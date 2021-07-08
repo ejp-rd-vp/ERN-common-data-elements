@@ -27,7 +27,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   a [sio:SIO_000006] ;
   a [sio:SIO_001001] ;
   rdfs:label xsd:string? ;
-  sio:SIO_000031 xsd:date ;
+  sio:SIO_000680 @:undiagnosedStartDateShape ;
   sio:SIO_000230 @:phenotypeInputShape ;
   sio:SIO_000230 @:genotypeInputShape ;
   sio:SIO_000229 @:undiagnosedOutputShape 
@@ -36,7 +36,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :undiagnosedOutputShapeIRI {
   a [sio:SIO_000015] ;
   rdfs:label xsd:string? ;
-  sio:SIO_000628 @:AttributeShape
+  sio:SIO_000628 @:undiagnosedAttributeShape
 }
 
 :undiagnosedAttributeShape IRI {
@@ -55,4 +55,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   a [sio:SIO_000015] ;
   a IRI /^https:\/\/identifiers.org\// ;
   rdfs:label xsd:string? 
+}
+
+:undiagnosedStartDateShape IRI {
+    a [sio:SIO_000031] ;
+    sio:SIO_000300 xsd:date
 }
