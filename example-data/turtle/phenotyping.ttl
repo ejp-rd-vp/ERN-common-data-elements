@@ -18,11 +18,11 @@
 
 :phenotypic_process_ a sio:SIO_000006, obo:OBI_0001546, obo:NCIT_C16205, obo:NCIT_C18020 ;
     rdfs:label "comparative phenotypic assessment"^^xsd:string ;
+    sio:SIO_000680 :phenotypic_startdate_ ;
     sio:SIO_000229 :phenotypic_output_ .
 
 :phenotypic_output_ a sio:SIO_000015, obo:NCIT_C102741 ;
     rdfs:label "Cerebellar ataxia"^^xsd:string ;
-    sio:SIO_000680 :phenotypic_startdate_ ;
     sio:SIO_000628 :phenotypic_attribute_ .
 
 :phenotypic_attribute_ a sio:SIO_000614, sio:SIO_0100565, obo:HP_0001251 ;

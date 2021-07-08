@@ -37,7 +37,7 @@
 
 :death_information_output_ a sio:SIO_000015;
     rdfs:label "patient death information"^^xsd:string ;
-    sio:SIO_000300 "2010-06-08"^^xsd:string ;
+    sio:SIO_000300 "2010-06-08"^^xsd:date ;
     sio:SIO_000628 :death_information_attribute_ .
 
 :death_information_attribute_ a sio:SIO_000614, obo:NCIT_C70810 ;
