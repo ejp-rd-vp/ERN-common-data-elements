@@ -19,7 +19,7 @@
     sio:SIO_000356 :death_information_process_ .
 
 :status_process_ a sio:SIO_000006, sio:SIO_001052 ;
-    rdfs:label "status process"^^xsd:string;
+    rdfs:label "status process"^^xsd:string ;
     sio:SIO_000229 :status_output_ .
 
 :status_output_ a sio:SIO_000015;
@@ -32,16 +32,16 @@
 
 :death_information_process_ a sio:SIO_000006 ;
     rdfs:label "death information recording process"^^xsd:string;
+    sio:SIO_000680 :death_information_startdate_ ;
     sio:SIO_000229 :death_information_output_ .
 
 :death_information_output_ a sio:SIO_000015;
     rdfs:label "patient death information"^^xsd:string ;
     sio:SIO_000300 "2010-06-08"^^xsd:string ;
-    sio:SIO_000679 :death_information_timeboundary_ ;
     sio:SIO_000628 :death_information_attribute_ .
 
 :death_information_attribute_ a sio:SIO_000614, obo:NCIT_C70810 ;
-    rdfs:label "Death of death"^^xsd:string .
+    rdfs:label "Date of death"^^xsd:string .
 
-:death_information_timeboundary_ a sio:SIO_000418 ;
-    sio:SIO_000300 "2010-01-01"^^xsd:date .
+:death_information_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "2010-06-09"^^xsd:date .

@@ -26,7 +26,6 @@
 :birthdate_output_ a sio:SIO_000015, sio:SIO_000418 ;
     rdfs:label "Birth Date"^^xsd:string ;
     sio:SIO_000300 "1995-01-01"^^xsd:date ;
-    sio:SIO_000679 :birthdate_timeboundary_ ;
     sio:SIO_000628 :birthdate_attribute_ .
 
 :birthdate_attribute_ a sio:SIO_000614, obo:NCIT_C68615 ;
