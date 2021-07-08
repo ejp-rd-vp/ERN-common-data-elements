@@ -24,8 +24,7 @@
 
 :consent_output_ a sio:SIO_000015 ;
     rdfs:label "Patient Consent Record"^^xsd:string ;
-    sio:SIO_000300 "general research use"^^xsd:string ;
-    sio:SIO_000680 :consent_startdate_ ; 
+    sio:SIO_000300 "general research use"^^xsd:string ; 
     sio:SIO_000628 :consent_attribute_ .   
 
 :consent_input_ a sio:SIO_000015, obo:ICO_0000001 ;
