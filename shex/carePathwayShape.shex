@@ -33,5 +33,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :carePathwayStartDateShape IRI {
     a [sio:SIO_000031] ;
+    rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:date
 }

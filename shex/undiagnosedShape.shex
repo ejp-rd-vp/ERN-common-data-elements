@@ -61,5 +61,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :undiagnosedStartDateShape IRI {
     a [sio:SIO_000031] ;
+    rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:date
 }

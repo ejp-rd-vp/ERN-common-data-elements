@@ -18,5 +18,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   a [sio:SIO_000115] ;
   rdfs:label xsd:string? ;
   sio:SIO_000020 @:personRoleShape ;
-  sio:SIO_000300 xsd:string?
+  sio:SIO_000300 xsd:string
 }
