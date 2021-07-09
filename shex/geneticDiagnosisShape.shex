@@ -6,12 +6,14 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :identifierShape IRI {
     a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
     sio:SIO_000020 @:geneticRoleShape ;
     sio:SIO_000300 xsd:string
 }
 
 :personShape IRI { 
     a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
     sio:SIO_000228 @:geneticRoleShape ;
     sio:SIO_000008 @:hgvsAttributeShape ;
     sio:SIO_000008 @:omimAttributeShape ;
@@ -44,7 +46,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     sio:SIO_000628 @:hgvsAttributeShape
 }
 
-:hgvsattributeShape IRI { 
+:hgvsAttributeShape IRI { 
     a [sio:SIO_000614] ;
     a [obo:NCIT_C172243] ;
     rdfs:label xsd:string? 

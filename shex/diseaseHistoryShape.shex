@@ -6,6 +6,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :identifierShape IRI {
     a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
     sio:SIO_000020 @:symptomOnsetRoleShape ;
     sio:SIO_000020 @:diagnosisDateRoleShape;
     sio:SIO_000300 xsd:string  
@@ -13,6 +14,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :personShape IRI { 
     a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
     sio:SIO_000228 @:symptomOnsetRoleShape ;
     sio:SIO_000008 @:symptomOnsetAttributeShape ;
     sio:SIO_000228 @:diagnosisDateRoleShape ;
@@ -66,7 +68,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [obo:HP_0030674 obo:HP_0003577 obo:NCIT_C124294 obo:HP_0003674] ;
     rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:date ;
-    sio:SIO_000628 @:AttributeShape
+    sio:SIO_000628 @:diagnosisDateAttributeShape
 }
 
 :diagnosisDateAttributeShape IRI {

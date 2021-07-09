@@ -15,7 +15,7 @@
    rdfs:label "Patient"^^xsd:string ;
    sio:SIO_000356 :assessment_test_ .
 
-:assessment_test_ a sio:SIO_000006, obo:NCIT_C20993, <http://purl.obolibrary.org/obo/NCIT_C20993> ;
+:assessment_test_ a sio:SIO_000006, obo:NCIT_C20993, obo:NCIT_C1212693 ;
    rdfs:label "Behavior Assessment system for Children"^^xsd:string ;
    sio:SIO_000680 :disability_startdate_ ;
    sio:SIO_000230 :question_answering_input_ ;
