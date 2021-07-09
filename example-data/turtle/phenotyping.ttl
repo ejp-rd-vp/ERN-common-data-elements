@@ -25,7 +25,7 @@
     rdfs:label "Cerebellar ataxia"^^xsd:string ;
     sio:SIO_000628 :phenotypic_attribute_ .
 
-:phenotypic_attribute_ a sio:SIO_000614, sio:SIO_0100565, obo:HP_0001251 ;
+:phenotypic_attribute_ a sio:SIO_000614, sio:SIO_010056, obo:HP_0001251 ;
     rdfs:label "Cerebellar ataxia"^^xsd:string .
 
 :phenotypic_startdate_ a sio:SIO_000031 ;
