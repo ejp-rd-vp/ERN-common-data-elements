@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   sio:SIO_000229 @:undiagnosedOutputShape 
 }
 
-:undiagnosedOutputShapeIRI {
+:undiagnosedOutputShape IRI {
   a [sio:SIO_000015] ;
   rdfs:label xsd:string? ;
   sio:SIO_000628 @:undiagnosedAttributeShape

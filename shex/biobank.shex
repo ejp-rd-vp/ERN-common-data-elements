@@ -3,7 +3,7 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 
 :identifierShape IRI { 
   a [sio:SIO_000115];

@@ -18,7 +18,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     sio:SIO_000228 @:birthdateRoleShape ;
     sio:SIO_000008 @:birthdateAttributeShape ;
     sio:SIO_000228 @:sexRoleShape ;
-    sio:SIO_000008 @:SexAttributeShape
+    sio:SIO_000008 @:sexAttributeShape
 }
 
 :birthdateRoleShape IRI {

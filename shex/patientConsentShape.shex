@@ -1,4 +1,4 @@
-PREFIX : <http://purl.org/ejp-rd/cde/v1shex/>
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/> 
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

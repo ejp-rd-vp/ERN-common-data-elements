@@ -44,7 +44,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     sio:SIO_000628 @:hgvsAttributeShape
 }
 
-:hgvsattributeShape IRI { 
+:hgvsAttributeShape IRI { 
     a [sio:SIO_000614] ;
     a [obo:NCIT_C172243] ;
     rdfs:label xsd:string? 

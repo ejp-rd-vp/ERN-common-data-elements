@@ -36,7 +36,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     a [sio:SIO_001003] ;
     rdfs:label xsd:string? ;
     sio:SIO_000300 xsd:string ;
-    sio:SIO_000669 xsd:date ;
     sio:SIO_000628 @:medicalDiagnosisAttributeShape
 }
 
