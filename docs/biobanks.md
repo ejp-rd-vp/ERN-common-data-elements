@@ -1,8 +1,8 @@
 ### Semantic model figure
 
 <p align="center">
-    <a href="../images/rdf/9_Biobanks.png" target="_blank">
-        <img src="../images/rdf/9_Biobanks.png">
+    <a href="../images/rdf/9_Biobank.png" target="_blank">
+        <img src="../images/rdf/9_Biobank.png">
     </a>
 </p>
 
