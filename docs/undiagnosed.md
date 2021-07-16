@@ -1,5 +1,8 @@
 ### Semantic model figure
 
+This module describes the data element 6.2'Undiagnosed case' which is part of the group 'Diagnosis'. 
+These elements, defined by the JRC, can be found on the EU RD Platform at [this link](https://eu-rd-platform.jrc.ec.europa.eu/sites/default/files/CDS/EU_RD_Platform_CDS_Final.pdf).
+
 ### Undiagnosis
 
 <p align="center">
