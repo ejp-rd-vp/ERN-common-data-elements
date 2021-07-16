@@ -1,5 +1,7 @@
 ### Semantic model figure
 
+This module describes the data element 8.1'Classification of functioning/disability' which is part of the group 'Disability'. These elements, defined by the JRC, can be found on the EU RD Platform at [this link](https://eu-rd-platform.jrc.ec.europa.eu/sites/default/files/CDS/EU_RD_Platform_CDS_Final.pdf).
+
 <p align="center">
     <a href="../images/rdf/10_Disability.png" target="_blank">
         <img src="../images/rdf/10_Disability.png">
