@@ -6,7 +6,7 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ### Semantic model figure
 
 <p align="center">
-    <a href="../images/rdf/5_Diagnosis.png" target="_blank">
+    <a href="../images/rdf/5_Disease_Diagnosis.png" target="_blank">
         <img src="../images/rdf/5_Diagnosis.png">
     </a>
 </p>
@@ -59,8 +59,8 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/5_Disease_history_and_diagnosis.png" target="_blank">
-        <img src="../images/shex/5_Disease_history_and_diagnosis.png">
+    <a href="../images/shex/5_Disease_diagnosis.svg" target="_blank">
+        <img src="../images/shex/5_Disease_diagnosis.svg">
     </a>
 </p>
 
@@ -198,8 +198,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/5_Disease_history_and_diagnosis.png" target="_blank">
-        <img src="../images/shex/5_Disease_history_and_diagnosis.png">
+    <a href="../images/shex/5_Disease_history.svg" target="_blank">
+        <img src="../images/shex/5_Disease_history.svg">
     </a>
 </p>
 

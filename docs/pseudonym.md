@@ -34,8 +34,8 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/1_Pseudonym.png" target="_blank">
-        <img src="../images/shex/1_Pseudonym.png">
+    <a href="../images/shex/1_Pseudonym.svg" target="_blank">
+        <img src="../images/shex/1_Pseudonym.svg">
     </a>
 </p>
 

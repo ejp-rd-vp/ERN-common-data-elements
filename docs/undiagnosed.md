@@ -135,8 +135,8 @@ TODO
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/7_Undiagnosed.png" target="_blank">
-        <img src="../images/shex/7_Undiagnosed.png">
+    <a href="../images/shex/7_Undiagnosed.svg" target="_blank">
+        <img src="../images/shex/7_Undiagnosed.svg">
     </a>
 </p>
 

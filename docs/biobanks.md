@@ -62,8 +62,8 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/9_Biobanks.png" target="_blank">
-        <img src="../images/shex/9_Biobanks.png">
+    <a href="../images/shex/9_Biobanks.svg" target="_blank">
+        <img src="../images/shex/9_Biobanks.svg">
     </a>
 </p>
 
