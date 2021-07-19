@@ -66,7 +66,67 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 
 ***
 ##### ShEx
-``` ShEx
-TODO
+
+```ShEx
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000020 @:consentRoleShape ;
+    sio:SIO_000300 xsd:string
+}
+
+:personShape IRI { 
+    a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:consentRoleShape ;
+    sio:SIO_000008 @:consentAttributeShape
+}
+
+:consentRoleShape IRI {
+    a [obo:OBI_0000093] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:consentProcessShape
+}
+
+:consentProcessShape IRI {
+    a [obo:OBI_0000810] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000680 @:consentStartDateShape ;
+    sio:SIO_000229 @:patientconsentOutputShape ;
+    sio:SIO_000230 @:consentInputShape
+}
+
+:patientconsentOutputShape IRI {
+    a [sio:SIO_000015] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000628 @:consentAttributeShape
+}
+
+:consentInputShape IRI {
+    a [sio:SIO_000015] ;
+    a [obo:ICO_0000001] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string
+}
+
+:consentAttributeShape IRI {
+    a [sio:SIO_000614] ;
+    a IRI ;
+    rdfs:label xsd:string? ;
+}
+
+:consentStartDateShape IRI {
+    a [sio:SIO_000031] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:date
+}
 ```
 

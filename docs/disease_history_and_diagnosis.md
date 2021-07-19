@@ -69,7 +69,60 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx
 
 ``` ShEx
-TODO
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    sio:SIO_000020 @:medicalDiagnosisRoleShape ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string
+}
+
+:personShape IRI { 
+    a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:medicalDiagnosisRoleShape ;
+    sio:SIO_000008 @:medicalDiagnosisAttributeShape
+}
+
+:medicalDiagnosisRoleShape IRI {
+    a [obo:OBI_0000093] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:medicalDiagnosisProcessShape
+}
+
+:medicalDiagnosisProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [sio:SIO_001001] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000680 @:medicalDiagnosisStartDateShape ;
+    sio:SIO_000229 @:medicalDiagnosisOutputShape
+}
+
+:medicalDiagnosisOutputShape IRI {
+    a [sio:SIO_000015] ;
+    a [sio:SIO_001003] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000628 @:medicalDiagnosisAttributeShape
+}
+
+:medicalDiagnosisAttributeShape IRI {
+    a [sio:SIO_000614] ;
+    a IRI /^http:\/\/www.orpha.net\/ORDO\/Orphanet_/ ;
+    rdfs:label xsd:string?
+}
+
+:medicalDiagnosisStartDateShape IRI {
+    a [sio:SIO_000031] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:date
+}
 ```
 
 
@@ -156,5 +209,82 @@ TODO
 
 
 ``` ShEx
-TODO
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000020 @:symptomOnsetRoleShape ;
+    sio:SIO_000020 @:diagnosisDateRoleShape;
+    sio:SIO_000300 xsd:string  
+}
+
+:personShape IRI { 
+    a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:symptomOnsetRoleShape ;
+    sio:SIO_000008 @:symptomOnsetAttributeShape ;
+    sio:SIO_000228 @:diagnosisDateRoleShape ;
+    sio:SIO_000008 @:diagnosisDateAttributeShape
+}
+
+:symptomOnsetRoleShape IRI {
+    a [obo:OBI_0000093] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:symptomOnsetProcessShape
+}
+
+:symptomOnsetProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [sio:SIO_001052] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000229 @:symptomOnsetOutputShape
+}
+
+:symptomOnsetOutputShape IRI {
+    a [sio:SIO_000015] ;
+    a [obo:HP_0030674 obo:HP_0003577 obo:NCIT_C124294 obo:HP_0003674] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:date ;
+    sio:SIO_000628 @:symptomOnsetAttributeShape
+}
+
+:symptomOnsetAttributeShape IRI {
+    a [sio:SIO_000614] ;
+    a [obo:NCIT_C124353] ;
+    rdfs:label xsd:string?
+}
+
+:diagnosisDateRoleShape IRI {
+    a [obo:OBI_0000093] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:diagnosisDateProcessShape
+}
+
+:diagnosisDateProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [sio:SIO_001052] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000229 @:diagnosisDateOutputShape
+}
+
+:diagnosisDateOutputShape IRI {
+    a [sio:SIO_000015] ;
+    a [obo:HP_0030674 obo:HP_0003577 obo:NCIT_C124294 obo:HP_0003674] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:date ;
+    sio:SIO_000628 @:diagnosisDateAttributeShape
+}
+
+:diagnosisDateAttributeShape IRI {
+    a [sio:SIO_000614] ;
+    a [obo:NCIT_C156420] ;
+    rdfs:label xsd:string?
+}
 ```

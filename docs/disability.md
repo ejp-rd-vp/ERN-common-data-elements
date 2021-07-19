@@ -64,52 +64,57 @@ This module describes the data element 8.1'Classification of functioning/disabil
 ##### ShEx
 
 ``` ShEx
-PREFIX : <http://purl.org/ejp-rd/cde/v020/shex/>
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/> 
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-:personShape IRI {
-  a [ sio:SIO_000498 ] ;
-  sio:SIO_000228 @:roleShape 
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000020 @:disabilityRoleShape ;
+    sio:SIO_000300 xsd:string
 }
 
-:roleShape IRI {
-  a [ obo:OBI_0000093 ] ;
-  sio:SIO_000356 @:testprocessShape
+:personShape IRI { 
+  a [sio:SIO_000498] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000228 @:disabilityRoleShape
 }
 
-:questionnaireShape IRI {
-  a [ obo:NCIT_C130322  obo:NCIT_C91102 ] ;
-  sio:SIO_000028 @:questionnaireQuestionShape
+:disabilityRoleShape IRI {
+  a [obo:OBI_0000093] ;
+  a [sio:SIO_000016] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000356 @:disabilityProcessShape
 }
 
-:questionnaireQuestionShape IRI {
-  a [ obo:NCIT_C130916 ] ;
+:disabilityProcessShape IRI {
+  a [sio:SIO_000006] ;
+  a [obo:NCIT_C20993] ;
+  a IRI /^http:\/\/purl.obolibrary.org\/obo\// ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000680 @:disabilityStartDateShape ;
+  sio:SIO_000230 @:questionInputShape ;
+  sio:SIO_000229 @:testOutputShape
+}
+
+:testOutputShape IRI {
+  a [sio:SIO_000015] ;
+  rdfs:label xsd:string? ;
   sio:SIO_000300 xsd:string
 }
 
-:testprocessShape IRI {
-  a [ obo:OMIT_0028217 ] ;
-  sio:SIO_000230 @:questionnaireQuestionShape ;
-  sio:SIO_000229 @:answerShape
+:questionInputShape IRI {
+  a [sio:SIO_000015] ;
+  a [obo:NCIT_C17048] ;
+  rdfs:label xsd:string? 
 }
 
-:answerShape IRI {
-  a [ sio:SIO_000340 ] ;
-  sio:SIO_000221 [obo:UO_0000033] ;
-  sio:SIO_000300 xsd:integer
-}
-
-:evaluationprocessShape IRI {
-  a [ obo:OMIT_0005448 ] ;
-  sio:SIO_000230 @:answerShape ;
-  sio:SIO_000229 @:scoreShape ;
-}
-
-:scoreShape IRI {
-  a [ snomedct:715823002 ] ;
-  sio:SIO_000300 xsd:decimal
+:disabilityStartDateShape IRI {
+    a [sio:SIO_000031] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:date
 }
 ```
