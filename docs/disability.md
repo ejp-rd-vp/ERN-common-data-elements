@@ -54,8 +54,8 @@ This module describes the data element 8.1'Classification of functioning/disabil
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/10_Disability.png" target="_blank">
-        <img src="../images/shex/10_Disability.png">
+    <a href="../images/shex/10_Disability.svg" target="_blank">
+        <img src="../images/shex/10_Disability.svg">
     </a>
 </p>
 

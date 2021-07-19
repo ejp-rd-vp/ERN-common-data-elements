@@ -34,8 +34,8 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/1_Pseudonym.png" target="_blank">
-        <img src="../images/shex/1_Pseudonym.png">
+    <a href="../images/shex/1_Pseudonym.svg" target="_blank">
+        <img src="../images/shex/1_Pseudonym.svg">
     </a>
 </p>
 
@@ -47,6 +47,7 @@ PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 :personShape IRI {
   a [sio:SIO_000498] ;

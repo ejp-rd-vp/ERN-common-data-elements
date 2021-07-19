@@ -58,8 +58,8 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/8_Consent.png" target="_blank">
-        <img src="../images/shex/8_Consent.png">
+    <a href="../images/shex/8_Consent.svg" target="_blank">
+        <img src="../images/shex/8_Consent.svg">
     </a>
 </p>
 

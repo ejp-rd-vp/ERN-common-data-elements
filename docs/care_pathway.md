@@ -47,8 +47,8 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx figure
 
 <p align="center">
-    <a href="../images/shex/4_Care_pathway.png" target="_blank">
-        <img src="../images/shex/4_Care_pathway.png">
+    <a href="../images/shex/4_Care_pathway.svg" target="_blank">
+        <img src="../images/shex/4_Care_pathway.svg">
     </a>
 </p>
 
