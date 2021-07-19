@@ -59,5 +59,42 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx
 
 ``` ShEx
-TODO
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    sio:SIO_000020 @:carePathwayRoleShape ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string
+}
+
+:personShape IRI { 
+    a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:carePathwayRoleShape
+}
+
+:carePathwayRoleShape IRI {
+    a [obo:OBI_0000093] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:carePathwayProcessShape
+}
+
+:carePathwayProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [obo:NCIT_C159705] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000680 @:carePathwayStartDateShape
+}
+
+:carePathwayStartDateShape IRI {
+    a [sio:SIO_000031] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:date
+}
 ```

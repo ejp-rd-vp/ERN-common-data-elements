@@ -146,5 +146,70 @@ TODO
 ##### ShEx
 
 ```shex
-TODO
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000020 @:undiagnosedRoleShape ;
+    sio:SIO_000300 xsd:string
+}
+
+:personShape IRI { 
+  a [sio:SIO_000498] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000228 @:undiagnosedRoleShape ;
+  sio:SIO_000008 @:undiagnosedAttributeShape 
+}
+
+:undiagnosedRoleShape IRI {
+  a [obo:OBI_0000093] ;
+  a [sio:SIO_000016] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000356 @:undiagnosedProcessShape
+}
+
+:undiagnosedProcessShape IRI {
+  a [sio:SIO_000006] ;
+  a [sio:SIO_001001] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000680 @:undiagnosedStartDateShape ;
+  sio:SIO_000230 @:phenotypeInputShape ;
+  sio:SIO_000230 @:genotypeInputShape ;
+  sio:SIO_000229 @:undiagnosedOutputShape 
+}
+
+:undiagnosedOutputShape IRI {
+  a [sio:SIO_000015] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000628 @:undiagnosedAttributeShape
+}
+
+:undiagnosedAttributeShape IRI {
+  a [sio:SIO_000614] ;
+  a [obo:NCIT_C113725] ;
+  rdfs:label xsd:string? 
+}
+
+:phenotypeInputShape IRI {
+  a [sio:SIO_000015] ;
+  a IRI /^http:\/\/purl.obolibrary.org\/obo\/HP_/  ;
+  rdfs:label xsd:string? 
+}
+
+:genotypeInputShape IRI {
+  a [sio:SIO_000015] ;
+  a IRI /^https:\/\/identifiers.org\// ;
+  rdfs:label xsd:string? 
+}
+
+:undiagnosedStartDateShape IRI {
+    a [sio:SIO_000031] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:date
+}
 ```

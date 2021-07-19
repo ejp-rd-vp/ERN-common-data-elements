@@ -71,5 +71,70 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx
 
 ``` ShEx
-TODO
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+:identifierShape IRI { 
+  a [sio:SIO_000115] ;
+  sio:SIO_000020 @:specimenRoleShape ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000300 xsd:string
+}
+
+:personShape IRI { 
+  a [sio:SIO_000498] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000228 @:specimenRoleShape
+}
+
+:specimenRoleShape IRI {
+  a [obo:OBI_0000093] ;
+  a [sio:SIO_000016] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000356 @:specimenProcessShape
+}
+
+:specimenProcessShape IRI {
+  a [sio:SIO_000006] ;
+  a [obo:OBI_0000659] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000229 @:specimenOutputShape
+}
+
+:specimenOutputShape IRI {
+  a [sio:SIO_000015] ;
+  a [obo:OBI_0100051] ;
+  rdfs:label xsd:string?
+}
+
+:biobankIdentifierShape IRI { 
+  a [sio:SIO_000115] ;
+  sio:SIO_000020 @:biobankRoleShape ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000300 xsd:string
+}
+
+:biobankShape IRI {
+  a [obo:OMIABIS_0000010] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000228 @:biobankRoleShape
+}
+
+:biobankRoleShape IRI {
+  a [obo:OBI_0000947] ;
+  a [sio:SIO_000016] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000356 @:biobankProcessShape
+}
+
+:biobankProcessShape IRI {
+  a [sio:SIO_000006] ;
+  a [obo:OBI_0302893] ;
+  rdfs:label xsd:string? ;
+  sio:SIO_000230 @:specimenOutputShape
+}
 ```

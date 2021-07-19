@@ -89,5 +89,102 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ##### ShEx
 
 ``` ShEx
-TODO
+PREFIX : <http://purl.org/ejp-rd/cde/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:identifierShape IRI {
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000020 @:geneticRoleShape ;
+    sio:SIO_000300 xsd:string
+}
+
+:personShape IRI { 
+    a [sio:SIO_000498] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000228 @:geneticRoleShape ;
+    sio:SIO_000008 @:hgvsAttributeShape ;
+    sio:SIO_000008 @:omimAttributeShape ;
+    sio:SIO_000008 @:hgncAttributeShape
+}
+
+:geneticRoleShape IRI {
+    a [obo:OBI_0000093] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:hgvsProcessShape ;
+    sio:SIO_000356 @:omimProcessShape ;
+    sio:SIO_000356 @:hgncProcessShape
+}
+
+# HGVS
+
+:hgvsProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [obo:NCIT_C15709] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000229 @:hgvsOutputShape
+}
+
+:hgvsOutputShape IRI {
+    a [sio:SIO_000015] ;
+    a [sio:SIO_001381] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000628 @:hgvsAttributeShape
+}
+
+:hgvsAttributeShape IRI { 
+    a [sio:SIO_000614] ;
+    a [obo:NCIT_C172243] ;
+    rdfs:label xsd:string? 
+}
+
+# OMIM
+
+:omimProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [obo:NCIT_C15709] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000229 @:omimOutputShape
+}
+
+:omimOutputShape IRI {
+    a [sio:SIO_000015] ;
+    a [sio:SIO_001381] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000628 @:omimAttributeShape
+}
+
+:omimAttributeShape IRI {
+    a [sio:SIO_000614] ;
+    a IRI  /^https:\/\/www.omim.org\/entry\// ;
+    rdfs:label xsd:string?
+}
+
+# HGNC
+
+:hgncProcessShape IRI {
+    a [sio:SIO_000006] ;
+    a [obo:NCIT_C15709] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000229 @:hgncOutputShape
+}
+
+:hgncOutputShape IRI {
+    a [sio:SIO_000015] ;
+    a [sio:SIO_001381] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string
+}
+
+:hgncAttributeShape IRI {
+    a [sio:SIO_000614] ;
+    a IRI /^https:\/\/identifiers.org\// ;
+    rdfs:label xsd:string?
+}
 ```
