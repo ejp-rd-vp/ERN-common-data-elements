@@ -16,7 +16,29 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ### Example RDF (turtle)
 
 ```ttl
-TODO
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :carepathway_role_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
+
+:person_ a sio:SIO_000498;
+    sio:SIO_000228 :carepathway_role_ .
+
+:carepathway_role_  a obo:OBI_0000093, sio:SIO_000016;
+    rdfs:label "First Contact Patient"^^xsd:string;
+    sio:SIO_000356 :carepathway_process_ .
+
+:carepathway_process_ a sio:SIO_000006, obo:NCIT_C159705 ;
+    rdfs:label "first contact with specialized center"^^xsd:string;
+    sio:SIO_000680 :carepathway_startdate_ .
+
+:carepathway_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "1995-01-01"^^xsd:date .
 ```
 
 ***

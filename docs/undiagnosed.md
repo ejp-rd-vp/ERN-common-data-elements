@@ -16,32 +16,46 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ### Example RDF (turtle)
 
 ```ttl
-@prefix : <http://purl.org/ejp-rd/cde/v020/example-rdf/> .
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:person_ a sio:SIO_000498 ;
-    sio:SIO_000228 :role_1 ;
-    sio:SIO_000228 :role_2 .
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :undiagnosed_role_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
 
-:role_1 a obo:OBI_0000093 ;
-    sio:SIO_000356 :process_1 .    
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :undiagnosed_role_ ;
+    sio:SIO_000008 :undiagnosed_attribute_ .
+
+:undiagnosed_role_ a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Patient"^^xsd:string ;
+    sio:SIO_000356 :undiagnosed_process_ .    
     
-:process_1 a obo:NCIT_C15709 ;
-    sio:SIO_000229 :variant_ .
+:undiagnosed_process_ a sio:SIO_000006, sio:SIO_001001 ;
+    rdfs:label "medical diagnosis"^^xsd:string ;
+    sio:SIO_000680 :undiagnosed_startdate_ ;
+    sio:SIO_000230 :phenotype_input_ ;
+    sio:SIO_000230 :genotype_input_ ;
+    sio:SIO_000229 :undiagnosed_output_ .
     
-:variant_ a obo:VariO_0138;
-    rdfs:label "NG_007148.2:g.146889G>A" .    
-    
-:role_2 a obo:OBI_0000093 ;
-    sio:SIO_000356 :process_2 .    
-    
-:process_2 a obo:NCIT_C16205 ;
-    sio:SIO_000229 :phenotype_ .
-    
-:phenotype_ a obo:HP_0001249 .  
+:undiagnosed_output_ a sio:SIO_000015 ;
+    rdfs:label "Undiagnosed"^^xsd:string ;
+    sio:SIO_000628 :undiagnosed_attribute_ .
+
+:undiagnosed_attribute_ a sio:SIO_000614, obo:NCIT_C113725 ;
+    rdfs:label "Undiagnosed"^^xsd:string .
+
+:phenotype_input_ a sio:SIO_000015, <http://purl.obolibrary.org/obo/HP_0001251> ;
+    rdfs:label "Cerebellar ataxia"^^xsd:string .
+
+:genotype_input_ a sio:SIO_000015, <https://identifiers.org/clinvar:4886> ;
+    rdfs:label "NM_003977.4(AIP):c.40C>T (p.Gln14Ter)"^^xsd:string .
+
+:undiagnosed_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "1998-04-06"^^xsd:date . 
 ```
 
 
@@ -80,7 +94,38 @@ TODO
 ### Example RDF (turtle)
 
 ```ttl
-TODO  
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :phenotypic_role_ ;
+    sio:SIO_000300 "uid_000007"^^xsd:string .
+
+:person_ a sio:SIO_000498;
+    sio:SIO_000228 :phenotypic_role_ ;
+    sio:SIO_000008 :phenotypic_attribute_ .
+
+:phenotypic_role_  a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Phenotyping Patient"^^xsd:string ;
+    sio:SIO_000356 :phenotypic_process_ .
+
+:phenotypic_process_ a sio:SIO_000006, obo:OBI_0001546, obo:NCIT_C16205, obo:NCIT_C18020 ;
+    rdfs:label "comparative phenotypic assessment"^^xsd:string ;
+    sio:SIO_000680 :phenotypic_startdate_ ;
+    sio:SIO_000229 :phenotypic_output_ .
+
+:phenotypic_output_ a sio:SIO_000015, obo:NCIT_C102741 ;
+    rdfs:label "Cerebellar ataxia"^^xsd:string ;
+    sio:SIO_000628 :phenotypic_attribute_ .
+
+:phenotypic_attribute_ a sio:SIO_000614, sio:SIO_010056, obo:HP_0001251 ;
+    rdfs:label "Cerebellar ataxia"^^xsd:string .
+
+:phenotypic_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "1992-01-01"^^xsd:date . 
 ```
 
 
