@@ -14,25 +14,61 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 
 ### Example RDF (turtle)
 
-An example RDF of a person's birthdate
-
 ```ttl
-TODO
-```
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-An example RDF of a person's sex
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :birthdate_role_ ;
+    sio:SIO_000020 :sex_role_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
 
-```ttl
+:person_ a sio:SIO_000498;
+    sio:SIO_000228 :birthdate_role_ ;
+    sio:SIO_000008 :birthdate_attribute_ ;
+    sio:SIO_000228 :sex_role_ ;
+    sio:SIO_000008 :sex_attribute_ .
 
-TODO
+:birthdate_role_  a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Patient for age assessment"^^xsd:string ;
+    sio:SIO_000356 :birthdate_process_ .
+
+:birthdate_process_ a sio:SIO_000006 ;
+    rdfs:label "age measuring process"^^xsd:string;
+    sio:SIO_000229 :birthdate_output_ .
+
+:birthdate_output_ a sio:SIO_000015, sio:SIO_000418 ;
+    rdfs:label "Birth Date"^^xsd:string ;
+    sio:SIO_000300 "1995-01-01"^^xsd:date ;
+    sio:SIO_000628 :birthdate_attribute_ .
+
+:birthdate_attribute_ a sio:SIO_000614, obo:NCIT_C68615 ;
+    rdfs:label "Birth Date"^^xsd:string .
+
+:sex_role_  a obo:OBI_0000093, sio:SIO_000016;
+    rdfs:label "Patient For Gender Assessment"^^xsd:string ;
+    sio:SIO_000356 :sex_process_ .
+
+:sex_process_ a sio:SIO_000006 ;
+    rdfs:label "sex measuring process"^^xsd:string ;
+    sio:SIO_000229 :sex_output_ .
+
+:sex_output_ a sio:SIO_000015;
+    rdfs:label "Male"^^xsd:string ;
+    sio:SIO_000300 "Male"^^xsd:string ;
+    sio:SIO_000628 :sex_attribute_ .
+
+:sex_attribute_ a sio:SIO_000614, obo:NCIT_C28421, obo:NCIT_C20197 ;
+    rdfs:label "Male"^^xsd:string .
 ```
 
 ***
 
 ### Validation artifacts 
 ##### ShEx figure
-
-Date of birth
 
 <p align="center">
     <a href="../images/shex/2_Personal_information_birthdate.png" target="_blank">
@@ -41,26 +77,11 @@ Date of birth
 </p>
 
 ***
-Sex
 
-<p align="center">
-    <a href="../images/shex/2_Personal_information_gender.png" target="_blank">
-        <img src="../images/shex/2_Personal_information_gender.png">
-    </a>
-</p>
-
-
-***
 
 ##### ShEx
-Date of birth
 
 ```
 TODO
 ```
 
-Sex
-
-```
-TODO
-```

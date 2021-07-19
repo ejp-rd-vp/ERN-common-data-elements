@@ -16,7 +16,39 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ### Example RDF (turtle)
 
 ```ttl
-TODO
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :diagnosis_role_ ;
+    sio:SIO_000300 "uid_000007"^^xsd:string .
+
+:person_ a sio:SIO_000498;
+    sio:SIO_000228 :diagnosis_role_ ;
+    sio:SIO_000008 :diagnosis_attribute_ .
+
+:diagnosis_role_ a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Diagnosis Patient"^^xsd:string;
+    sio:SIO_000356 :diagnosis_process_ .
+
+:diagnosis_process_ a sio:SIO_000006, sio:SIO_001001 ;
+    rdfs:label "medical diagnosis"^^xsd:string ;
+    sio:SIO_000680 :diagnosis_startdate_ ;
+    sio:SIO_000229 :diagnosis_output_ .
+
+:diagnosis_output_ a sio:SIO_000015, sio:SIO_001003 ;
+    rdfs:label "rare non-syndromic central nervous system malformation characterized by complete or near-complete absence of the cerebellum with a normal sized posterior fossa, possibly accompanied by hypoplasia of the brainstem."^^xsd:string ;
+    sio:SIO_000300 "rare non-syndromic central nervous system malformation characterized by complete or near-complete absence of the cerebellum with a normal sized posterior fossa, possibly accompanied by hypoplasia of the brainstem."^^xsd:string ;
+    sio:SIO_000628 :diagnosis_attribute_ .
+
+:diagnosis_attribute_ a sio:SIO_000614, <http://www.orpha.net/ORDO/Orphanet_1400> ;
+    rdfs:label "rare non-syndromic central nervous system malformation characterized by complete or near-complete absence of the cerebellum with a normal sized posterior fossa, possibly accompanied by hypoplasia of the brainstem."^^xsd:string .
+
+:diagnosis_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "1996-02-12"^^xsd:date .
 ```
 
 
@@ -56,7 +88,54 @@ TODO
 ### Example RDF (turtle)
 
 ```ttl
-TODO
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :symptom_onset_role_ ;
+    sio:SIO_000020 :diagnosis_date_role_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
+
+:person_ a sio:SIO_000498;
+    sio:SIO_000228 :symptom_onset_role_ ;
+    sio:SIO_000008 :symptom_onset_attribute_ ;
+    sio:SIO_000228 :diagnosis_date_role_ ;
+    sio:SIO_000008 :diagnosis_date_attribute_ .
+
+:symptom_onset_role_  a obo:OBI_0000093, sio:SIO_000016;
+    rdfs:label "Symptom Onset Patient"^^xsd:string;
+    sio:SIO_000356 :symptom_onset_process_ .
+
+:symptom_onset_process_ a sio:SIO_000006, sio:SIO_001052 ;
+    rdfs:label "data collection - symptom onset date recording process"^^xsd:string;
+    sio:SIO_000229 :symptom_onset_output_ .
+
+:symptom_onset_output_ a sio:SIO_000015, obo:HP_0030674 ;
+    rdfs:label "date of onset (in official CDE this is age of onset)"^^xsd:string ;
+    sio:SIO_000300 "1998-06-08"^^xsd:date ;  
+    sio:SIO_000628 :symptom_onset_attribute_ .
+
+:symptom_onset_attribute_ a sio:SIO_000614, obo:NCIT_C124353  ;
+    rdfs:label "Age at onset"^^xsd:string .
+
+:diagnosis_date_role_  a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Diagnosis Date Patient"^^xsd:string ;
+    sio:SIO_000356 :diagnosis_date_process_ .
+
+:diagnosis_date_process_ a sio:SIO_000006, sio:SIO_001052 ;
+    rdfs:label "data collection - diagnosis date recording process"^^xsd:string ;
+    sio:SIO_000229 :diagnosis_date_output_ .
+
+:diagnosis_date_output_ a sio:SIO_000015, obo:HP_0030674 ;
+    rdfs:label "age at diagnosis"^^xsd:string ;
+    sio:SIO_000300 "1999-06-08"^^xsd:date ;
+    sio:SIO_000628 :diagnosis_date_attribute_ .
+
+:diagnosis_date_attribute_ a sio:SIO_000614, obo:NCIT_C156420 ;
+    rdfs:label "Age at diagnosis"^^xsd:string .
 ```
 
 

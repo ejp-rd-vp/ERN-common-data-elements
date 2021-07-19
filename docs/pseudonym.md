@@ -14,7 +14,19 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ### Example RDF (turtle)
 
 ```ttl
-TODO
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:person_ a sio:SIO_000498 ;
+  sio:SIO_000228 :role_ .
+
+:role_ a obo:OBI_0000093 .
+
+:identifier_ a sio:SIO_000115 ; 
+  sio:SIO_000020 :role_ ;
+  sio:SIO_000300 "uid_000008"^^xsd:string .
 ```
 
 ***

@@ -14,7 +14,63 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ### Example RDF (turtle)
 
 ```ttl
-TODO
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :genetic_role_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
+
+:person_ a sio:SIO_000498;
+    sio:SIO_000228 :genetic_role_ ;
+    sio:SIO_000008 :hgvs_attribute_ ;
+    sio:SIO_000008 :omim_attribute_ ;
+    sio:SIO_000008 :hgnc_attribute_ .
+
+:genetic_role_  a obo:OBI_0000093, sio:SIO_000016;
+    rdfs:label "Genetic Diagnosis Patient"^^xsd:string;
+    sio:SIO_000356 :hgvs_process_ ;
+    sio:SIO_000356 :omim_process_ ;
+    sio:SIO_000356 :hgnc_process_ .
+
+:hgvs_process_ a sio:SIO_000006, obo:NCIT_C15709 ;
+    rdfs:label "genetic testing"^^xsd:string;
+    sio:SIO_000229 :hgvs_output_ .
+
+:hgvs_output_ a sio:SIO_000015, sio:SIO_001381;
+    rdfs:label "HGVS genome sequence variant"^^xsd:string ;
+    sio:SIO_000300 "NM_004006.3:c.4375C>T"^^xsd:string;
+    sio:SIO_000628 :hgvs_attribute_ .
+
+:hgvs_attribute_ a sio:SIO_000614, obo:NCIT_C172243 ;
+    rdfs:label "NM_004006.3:c.4375C>T"^^xsd:string .
+
+:omim_process_ a sio:SIO_000006, obo:NCIT_C15709 ;
+    rdfs:label "genetic testing"^^xsd:string;
+    sio:SIO_000229 :omim_output_ .
+
+:omim_output_ a sio:SIO_000015, sio:SIO_001381;
+    rdfs:label "OMIM genome sequence variant"^^xsd:string ;
+    sio:SIO_000300 "192977"^^xsd:string;
+    sio:SIO_000628 :omim_attribute_ .
+
+:omim_attribute_ a sio:SIO_000614, <https://www.omim.org/entry/192977> ;
+    rdfs:label "192977"^^xsd:string .
+
+:hgnc_process_ a sio:SIO_000006, obo:NCIT_C15709 ;
+    rdfs:label "genetic testing"^^xsd:string;
+    sio:SIO_000229 :hgnc_output_ .
+
+:hgnc_output_ a sio:SIO_000015, sio:SIO_001381;
+    rdfs:label "HGNC genome sequence variant"^^xsd:string ;
+    sio:SIO_000300 "HGNC:12698"^^xsd:string;
+    sio:SIO_000628 :hgnc_attribute_ .
+
+:hgnc_attribute_ a sio:SIO_000614, <https://identifiers.org/HGNC:12698> ;
+    rdfs:label "HGNC:12698"^^xsd:string .
 ```
 
 ### Validation artifacts 

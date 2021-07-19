@@ -14,7 +14,44 @@ These elements, defined by the JRC, can be found on the EU RD Platform at [this 
 ### Example RDF (turtle)
 
 ```ttl
-TODO
+@prefix : <http://purl.org/ejp-rd/cde/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:identifier_ a sio:SIO_000115 ;
+    sio:SIO_000020 :consent_role_ ;
+    sio:SIO_000300 "uid_000008"^^xsd:string .
+
+:person_ a sio:SIO_000498 ;
+    sio:SIO_000228 :consent_role_ ;
+    sio:SIO_000008 :consent_attribute_ .
+
+:consent_role_  a obo:OBI_0000093, sio:SIO_000016;
+    rdfs:label "Patient for status recording"^^xsd:string;
+    sio:SIO_000356 :consent_process_ .
+
+:consent_process_ a obo:OBI_0000810 ;
+    rdfs:label "consenting process"^^xsd:string;
+    sio:SIO_000229 :consent_output_ ;
+    sio:SIO_000230 :consent_input_ ;
+    sio:SIO_000680 :consent_startdate_ .
+
+:consent_output_ a sio:SIO_000015 ;
+    rdfs:label "Patient Consent Record"^^xsd:string ;
+    sio:SIO_000300 "general research use"^^xsd:string ; 
+    sio:SIO_000628 :consent_attribute_ .   
+
+:consent_input_ a sio:SIO_000015, obo:ICO_0000001 ;
+    rdfs:label "information content entity"^^xsd:string ;
+    sio:SIO_000300 "http://example.org/my_consent_document"^^xsd:string .
+
+:consent_attribute_ a sio:SIO_000614, <http://example.org/my_consent_document> ;
+    rdfs:label "general research use"^^xsd:string .
+
+:consent_startdate_ a sio:SIO_000031 ;
+    sio:SIO_000300 "1999-01-01"^^xsd:date .
 ```
 
 ### Validation artifacts 
